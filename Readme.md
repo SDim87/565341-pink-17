@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Sorokin Dmitriy](https://up.htmlacademy.ru/adaptive/17/user/565341).
-* Наставник: `Неизвестно`.
+* Наставник: `Без наставника`.
 
 ---
 
