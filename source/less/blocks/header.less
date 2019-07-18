@@ -17,13 +17,15 @@
   animation: colorClose 0.2s ease-in-out forwards;
 
   @keyframes colorClose {
-    0%{
+    0% {
       background-color: @color-main;
     }
-    99%{
+
+    99% {
       background-color: @color-main;
     }
-    100%{
+
+    100% {
       background-color: transparent;
     }
   }
@@ -35,10 +37,7 @@
   animation: colorOpen 0.2s 0.2s ease-in-out forwards;
 
   @keyframes colorOpen {
-    0%{
-
-    }
-    100%{
+    100% {
       background-color: @color-main;
     }
   }
@@ -71,4 +70,3 @@
   display: none;
   pointer-events: none;
 }
-
