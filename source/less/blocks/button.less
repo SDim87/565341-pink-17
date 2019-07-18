@@ -1,0 +1,29 @@
+.button {
+  display: block;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: @color-second;
+  border: 3px solid @color-second;
+  border-radius: 30px;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  transition: @trasition;
+
+  &:hover,
+  &:focus {
+    color: @color-fourth;
+    background-color: @color-second;
+  }
+
+  &:active {
+    color: @color-seventh;
+  }
+
+  &_first {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}

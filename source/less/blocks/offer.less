@@ -1,0 +1,44 @@
+.offer {
+  padding-top: 46px;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.offer__title {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 300;
+  max-width: 210px;
+
+  &:first-child {
+    margin-bottom: 35px;
+  }
+}
+
+.offer__bg .icon {
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .offer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+
+    flex-wrap: wrap;
+  }
+
+  .offer__title {
+    margin-bottom: 0;
+    font-size: 40px;
+
+    &:last-child {
+      width: 570px;
+      margin-bottom: 0;
+
+      align-self: center;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.form-radio {
+  background-color: @silver;
+
+  &__form {
+    padding-top: 40px;
+    padding-bottom: 46px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    color: @pink;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    margin-bottom: 46px;
+    padding-left: 70px;
+    cursor: pointer;
+    color: @black-blue;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  &__label:last-child {
+    margin-bottom: 0;
+  }
+
+  &__label::before {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 39px;
+    height: 39px;
+    content: "";
+    cursor: pointer;
+    border: 2px solid @silver-second;
+    border-radius: 50%;
+  }
+
+  &__label::after {
+    position: absolute;
+    top: 9px;
+    left: 12px;
+    display: none;
+    width: 15px;
+    height: 15px;
+    content: "";
+    border-radius: 50%;
+    background-color: @pink;
+  }
+
+  &__input {
+    margin-right: 30px;
+  }
+
+  & input:checked + &__label::after {
+    display: block;
+  }
+
+  & input:hover + &__label::before,
+  & input:focus + &__label::before {
+    border: 2px solid @black-silver;
+  }
+
+  & input:focus + label {
+    border-color: @brown;
+    outline: thin dotted;
+    // outline: 5px auto -webkit-focus-ring-color;
+  }
+
+  & input + &__label:active::before {
+    border: 2px solid @pink;
+  }
+}

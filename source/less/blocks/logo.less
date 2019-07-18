@@ -1,0 +1,40 @@
+.logo {
+  display: flex;
+
+  &:hover .icon,
+  &:focus .icon {
+    fill: @color-fourth;
+  }
+
+  &:active .icon {
+    opacity: 0.3;
+  }
+
+  &_mobile:active .icon {
+    fill: @color-second;
+  }
+
+  &_tablet {
+    width: 147px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &_tablet:active .icon {
+    fill: @color-main;
+  }
+
+  &_academy:hover .icon,
+  &_academy:focus .icon {
+    fill: @color-main;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .logo {
+    // &[href]:active {
+    // }
+  }
+}
