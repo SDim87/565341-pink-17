@@ -1,0 +1,90 @@
+.download {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: @black-blue;
+
+  &__title {
+    display: none;
+    margin: 0;
+    margin-bottom: 35px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 300;
+  }
+
+  &__button {
+    margin-bottom: 30px;
+  }
+
+  &__box {
+    display: flex;
+    font-size: 0;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link {
+    width: 50px;
+    height: 60px;
+    margin-right: 30px;
+  }
+
+  &__link:last-child {
+    margin-right: 0;
+  }
+
+  &__link--app-store {
+    background-image: url("../../img/logo-apple.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__link--android {
+    background-image: url("../../img/logo-android.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__link--windows {
+    background-image: url("../../img/logo-microsoft.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__description {
+    margin: 0;
+    margin-top: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .download {
+    width: 300px;
+    margin-top: 95px;
+    margin-left: 20px;
+    padding: 0;
+    background-color: transparent;
+
+    &__title {
+      display: block;
+    }
+
+    &__button {
+      margin-bottom: 45px;
+    }
+
+    &__description {
+      margin-top: 35px;
+      font-size: 18px;
+    }
+  }
+}

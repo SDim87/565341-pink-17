@@ -3,3 +3,19 @@
 --
 
 Изображение htmlacademy.svg — это логотип Академии. Другие варианты логотипа можно забрать из репозитория https://github.com/htmlacademy/logo.
+
+Подключение картинок из спрайта: https://github.com/jkphl/svg-sprite
+
+`<svg class="img">
+  <use xlink:href="sprite.svg#shopping-cart"></use>
+</svg>`
+
+// или
+
+`<img src="sprite.svg#shopping-cart">`
+
+// с помощью CSS background
+
+`.shopping-cart {
+  background: url(sprite.svg#shopping-cart) no-repeat;
+}`

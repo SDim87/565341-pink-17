@@ -1,0 +1,94 @@
+.price {
+  padding: 104px 0 40px;
+  background-color: @color-silver-third;
+}
+
+.price__slider {
+  display: flex;
+  overflow: hidden;
+
+  justify-content: center;
+}
+
+.price__list {
+  min-width: 280px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-right: 1px solid @color-silver-second;
+  border-left: 1px solid @color-silver-second;
+}
+
+.price__item {
+  display: flex;
+  box-sizing: border-box;
+  height: 63px;
+  padding: 0 22px;
+  text-transform: uppercase;
+  color: @color-main;
+  border-bottom: 2px solid @color-silver-second;
+  background-color: @color-second;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+
+  justify-content: space-between;
+  align-items: center;
+
+  &_top {
+    padding: 15px 0 20px;
+    text-align: center;
+    color: @color-text-second;
+    background-color: @color-main;
+    font-size: 18px;
+    font-weight: 700;
+    height: 96px;
+    display: block;
+  }
+
+  &_hit {
+    position: relative;
+  }
+
+  &_hit::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 72px;
+    height: 72px;
+    content: "";
+    background-image: url("../../img/bg-hit.svg");
+  }
+
+  &_hit::after {
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    width: 72px;
+    height: 72px;
+    content: "Хит";
+    transform: rotate(-45deg);
+    text-transform: uppercase;
+    color: @color-text-second;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+}
+
+.price__money {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+@media (min-width: @tablet-width) {
+  .price {
+    &::before {
+      height: 55px;
+    }
+  }
+
+  .price .slider-inners {
+    display: none;
+  }
+}
