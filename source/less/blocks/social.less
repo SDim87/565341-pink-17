@@ -1,0 +1,46 @@
+.social {
+  display: flex;
+
+  justify-content: center;
+
+  &_indent {
+    margin: 40px 0;
+  }
+}
+
+.social__item {
+  width: 50px;
+  height: 50px;
+  border: 3px solid @color-black-first;
+  border-radius: 50%;
+  transition: @trasition;
+  display: flex;
+
+  &:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &:hover,
+  &:focus {
+    border: 3px solid @color-main;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.social__item .icon {
+  margin: auto;
+}
+
+
+@media (min-width: @tablet-width) {
+  .social {
+    min-width: 320px;
+
+    &_indent {
+      margin-bottom: 0;
+    }
+  }
+}

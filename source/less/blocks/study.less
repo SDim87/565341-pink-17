@@ -1,0 +1,61 @@
+.study {
+  display: none;
+  min-height: 400px;
+
+  &__wrapper {
+    width: 310px;
+    padding-top: 10px;
+  }
+
+  &__timer {
+    position: relative;
+    width: 240px;
+    height: 276px;
+  }
+
+  &__timer::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 202px;
+    height: 202px;
+    content: "";
+    border: 14px solid @pink;
+    border-radius: 50%;
+    background-color: red;
+  }
+
+  &__title {
+    max-width: 270px;
+    margin: 0;
+    margin-bottom: 10px;
+    color: #000000;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+
+  &__content {
+    margin: 0;
+    margin-bottom: 10px;
+    color: @black-silver;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__link {
+    display: block;
+    color: @pink;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .study {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+  }
+}

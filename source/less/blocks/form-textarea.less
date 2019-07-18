@@ -1,0 +1,37 @@
+.form-textarea__form {
+  padding-top: 33px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: @pink;
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  &__input {
+    width: 100%;
+    min-height: 200px;
+    margin-bottom: 46px;
+    padding: 18px;
+    padding-top: 15px;
+    resize: none;
+    border: 2px solid @silver;
+  }
+
+  &__input::placeholder {
+    color: @black-silver;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  &__input:hover {
+    border: 2px solid @black-silver;
+  }
+
+  &__input:focus {
+    border: 2px solid @pink;
+  }
+}

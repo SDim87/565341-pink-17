@@ -1,0 +1,78 @@
+.icon {
+  transition: @trasition;
+
+  &_logo-mobile {
+    width: 75px;
+    height: 23px;
+  }
+
+  &_logo-tablet {
+    width: 147px;
+    height: 40px;
+  }
+
+  &_logo-academy {
+    width: 27px;
+    height: 34px;
+  }
+
+  &_burger {
+    width: 0;
+    height: 0;
+    transform: scale(0);
+  }
+
+  &_burger.is-opened {
+    width: 50px;
+    height: 24px;
+    transform: scale(1);
+  }
+
+  &_close {
+    opacity: 0;
+    transform: scale(0);
+    width: 0;
+  }
+
+  &_close.is-opened {
+    width: 23px;
+    height: 23px;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &_social {
+    width: 20px;
+    height: 20px;
+  }
+
+  &_size_m {
+    width: 27px;
+    height: 27px;
+  }
+
+  &_size_l {
+    width: 31px;
+    height: 31px;
+  }
+
+  &_first {
+    fill: @color-main;
+  }
+
+  &_second {
+    fill: @color-second;
+  }
+
+  &_third {
+    fill: @color-fourth;
+  }
+
+  &_fourth {
+    fill: @color-eighth;
+  }
+
+  &_fifth {
+    fill: @color-ninth;
+  }
+}
