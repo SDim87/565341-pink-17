@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Пинк</title>
-  <link rel="stylesheet" href="css/normalize.css">
+  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -77,28 +77,28 @@
         <div class="container">
           <h4 class="form__title">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</h4>
           <div class="form__group">
-            <input class="form__checkbox visually-hidden" type="checkbox" name="selfie-shark" id="selfie-shark">
-            <label class="form__label-checkbox" for="selfie-shark">Сделал селфи с акулой</label>
+            <input class="form__check visually-hidden" type="checkbox" name="selfie-shark" id="selfie-shark">
+            <label class="form__label form__label_check" for="selfie-shark">Сделал селфи с акулой</label>
           </div>
           <div class="form__group">
-            <input class="form__checkbox visually-hidden" type="checkbox" name="tanned-beach" id="tanned-beach">
-            <label class="form__label-checkbox" for="tanned-beach">Обгорел на пляже</label>
+            <input class="form__check visually-hidden" type="checkbox" name="tanned-beach" id="tanned-beach">
+            <label class="form__label form__label_check" for="tanned-beach">Обгорел на пляже</label>
           </div>
           <div class="form__group">
-            <input class="form__checkbox visually-hidden" type="checkbox" name="chuck-norris" id="chuck-norris">
-            <label class="form__label-checkbox" for="chuck-norris">Видел Чака Норриса</label>
+            <input class="form__check visually-hidden" type="checkbox" name="chuck-norris" id="chuck-norris">
+            <label class="form__label form__label_check" for="chuck-norris">Видел Чака Норриса</label>
           </div>
           <div class="form__group">
-            <input class="form__checkbox visually-hidden" type="checkbox" name="buy-souvenirs" id="buy-souvenirs">
-            <label class="form__label-checkbox" for="buy-souvenirs">Накупил сувениров</label>
+            <input class="form__check visually-hidden" type="checkbox" name="buy-souvenirs" id="buy-souvenirs">
+            <label class="form__label form__label_check" for="buy-souvenirs">Накупил сувениров</label>
           </div>
           <div class="form__group">
-            <input class="form__checkbox visually-hidden" type="checkbox" name="held-tower" id="held-tower">
-            <label class="form__label-checkbox" for="held-tower">Удержал башню</label>
+            <input class="form__check visually-hidden" type="checkbox" name="held-tower" id="held-tower">
+            <label class="form__label form__label_check" for="held-tower">Удержал башню</label>
           </div>
           <div class="form__group">
-            <input class="form__checkbox visually-hidden" type="checkbox" name="broken-hotel" id="broken-hotel">
-            <label class="form__label-checkbox" for="broken-hotel">Разгромил отель</label>
+            <input class="form__check visually-hidden" type="checkbox" name="broken-hotel" id="broken-hotel">
+            <label class="form__label form__label_check" for="broken-hotel">Разгромил отель</label>
           </div>
         </div>
       </section>
@@ -115,23 +115,36 @@
           </div>
         </div>
       </section>
-      <!--
-        <section class="form-radio form-radio__form">
-          <h4 class="form-radio__title">С каким приложением путешествовали?</h4>
-          <input class="visually-hidden" type="radio" name="radio-platform" id="radio-ios">
-          <label class="form-radio__label" for="radio-ios">Pink для iOS</label>
-          <input class="visually-hidden" type="radio" name="radio-platform" id="radio-android">
-          <label class="form-radio__label" for="radio-android">Pink на Android</label>
-          <input class="visually-hidden" type="radio" name="radio-platform" id="radio-windows">
-          <label class="form-radio__label" for="radio-windows">Windows Phone</label>
-        </section>
-        <section class="form-textarea form-textarea__form">
-          <h4 class="form-textarea__title">Опишите свои эмоции</h4>
-          <textarea class="form-textarea__input" name="emotions"
+      <section class="form__section form__section_bg">
+        <div class="container">
+          <h4 class="form__title">С каким приложением путешествовали?</h4>
+          <div class="form__group">
+            <input class="form__check visually-hidden" type="radio" name="radio-platform" id="ios">
+            <label class="form__label form__label_check form__label_radio" for="ios">Pink для iOS</label>
+          </div>
+          <div class="form__group">
+            <input class="form__check visually-hidden" type="radio" name="radio-platform" id="android">
+            <label class="form__label form__label_check form__label_radio" for="android">Pink на Android</label>
+          </div>
+          <div class="form__group">
+            <input class="form__check visually-hidden" type="radio" name="radio-platform" id="windows">
+            <label class="form__label form__label_check form__label_radio" for="windows">Windows Phone</label>
+          </div>
+        </div>
+      </section>
+      <section class="form__section">
+        <div class="container">
+          <h4 class="form__title form__title_indent">Опишите свои эмоции</h4>
+          <textarea class="form__input form__input_textarea" name="comment"
             placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-        </section>
-        <button class="button-form button-form__form" type="submit">Отправить форму</button>
-        <p class="form-required form-required__form"><span class="form-mark">*</span> &mdash; обязательные поля</p> -->
+        </div>
+      </section>
+      <section class="form__section form__section_indent">
+        <div class="container">
+          <button class="button button_second button_size_xl" type="submit">Отправить форму</button>
+          <p class="form__required"><span class="form__mark">*</span> &mdash; обязательные поля</p>
+        </div>
+      </section>
     </form>
   </main>
   <footer class="footer">
@@ -141,17 +154,17 @@
       </svg>
     </a>
     <div class="social social_indent">
-      <a class="social__item social__item_tw" href="#" aria-labelledby="Twitter">
+      <a class="social__item social__item_tw" href="#">Twitter
         <svg class="icon icon_social icon_third">
           <use xlink:href="img/sprite.svg#icon-twitter"></use>
         </svg>
       </a>
-      <a class="social__item social__item_fb" href="#" aria-labelledby="Facebook">
+      <a class="social__item social__item_fb" href="#">Facebook
         <svg class="icon icon_social icon_third">
           <use xlink:href="img/sprite.svg#icon-facebook"></use>
         </svg>
       </a>
-      <a class="social__item social__item_yt" href="#" aria-labelledby="YouTube">
+      <a class="social__item social__item_yt" href="#">YouTube
         <svg class="icon icon_social icon_third">
           <use xlink:href="img/sprite.svg#icon-youtube"></use>
         </svg>

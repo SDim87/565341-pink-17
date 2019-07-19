@@ -1,16 +1,16 @@
 .button {
   display: block;
-  padding: 15px;
+  padding: 0 15px;
+  cursor: pointer;
+  transition: @trasition;
   text-align: center;
   text-decoration: none;
-  color: @color-second;
+  color: @color-text-second;
   border: 3px solid @color-second;
   border-radius: 30px;
   background-color: transparent;
   font-size: 18px;
   font-weight: 700;
-  line-height: 18px;
-  transition: @trasition;
 
   &:hover,
   &:focus {
@@ -25,5 +25,38 @@
   &_first {
     max-width: 360px;
     margin: 0 auto;
+  }
+
+  &_second {
+    width: 100%;
+    padding: 0 14px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3px;
+    background-color: @color-brand;
+    line-height: 30px;
+
+    &:hover,
+    &:focus {
+      color: @color-text-second;
+      background-color: @color-brand-second;
+    }
+
+    &:active {
+      color: @color-silver-fourth;
+    }
+
+    &:disabled {
+      cursor: auto;
+      background-color: @color-silver-second;
+    }
+  }
+
+  &_size_l {
+    line-height: 55px;
+  }
+
+  &_size_xl {
+    line-height: 64px;
   }
 }

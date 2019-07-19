@@ -9,12 +9,13 @@
 }
 
 .social__item {
+  display: flex;
   width: 50px;
   height: 50px;
+  transition: @trasition;
   border: 3px solid @color-black-first;
   border-radius: 50%;
-  transition: @trasition;
-  display: flex;
+  font-size: 0;
 
   &:not(:last-child) {
     margin-right: 12px;
