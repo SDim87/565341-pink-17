@@ -18,4 +18,3 @@ headerBtn.addEventListener('click', function toggleMenu() {
     el.classList.contains(modOpened) ? el.classList.remove(modOpened) : el.classList.add(modOpened);
   }
 });
-

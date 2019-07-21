@@ -1,0 +1,92 @@
+.range {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+
+  appearance: none;
+}
+
+.range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  border-radius: 2px;
+  background: @color-main;
+}
+
+.range::-webkit-slider-thumb {
+  box-sizing: border-box;
+  width: 15px;
+  height: 15px;
+  margin-top: -7px;
+  cursor: pointer;
+  transition: @transition;
+  border: 2px solid @color-fourth;
+  border-radius: 50%;
+  background: @color-silver-second;
+
+  appearance: none;
+}
+
+.range:hover::-webkit-slider-thumb {
+  background: @color-fourth;
+}
+
+// mozila
+.range::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: @color-main;
+}
+
+.range::-moz-range-thumb {
+  box-sizing: border-box;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  transition: @transition;
+  border: 2px solid @color-fourth;
+  border-radius: 50%;
+  background: @color-silver-second;
+}
+
+.range:hover::-moz-range-thumb {
+  background: @color-fourth;
+}
+
+// EX11
+.range::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  color: transparent;
+  border-width: 16px 0;
+  border-color: transparent;
+  background: transparent;
+}
+
+.range::-ms-fill-lower {
+  border: 0.2px solid @color-main;
+  border-radius: 2px;
+}
+
+.range::-ms-fill-upper {
+  border: 0.2px solid @color-main;
+  border-radius: 2px;
+}
+
+.range::-ms-thumb {
+  box-sizing: border-box;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  border: 2px solid @color-fourth;
+  border-radius: 50%;
+  background: @color-silver-second;
+}
+
+.range:hover::-ms-thumb {
+  background: @color-fourth;
+}

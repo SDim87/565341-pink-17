@@ -1,0 +1,52 @@
+.filter {
+  background-color: @color-silver-second;
+  padding-top: 20px;
+}
+
+.filter__group {
+  display: flex;
+  justify-content: center;
+  margin-top: 42px;
+}
+
+.filter__item {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-right: 35px;
+  }
+}
+
+.filter__item.is-active {
+  pointer-events: none;
+}
+
+.filter__item .icon {
+  opacity: 0.3;
+}
+
+.filter__item.is-active .icon {
+  fill: @color-fourth;
+  opacity: 1;
+}
+
+.filter__item:hover .icon {
+  opacity: 0.5;
+}
+
+.filter__range {
+  display: flex;
+  min-height: 15px;
+  margin: 32px auto 28px;
+  max-width: 360px;
+}
+
+.filter__buttons {
+  border-top: 1px solid @color-black-first;
+  padding: 40px 20px;
+}
+
+.filter__buttons .button:not(:last-child) {
+  margin-bottom: 12px;
+}

@@ -1,40 +1,67 @@
-.photo {
-  &__picture-hit {
-    position: relative;
-    display: block;
-    font-size: 0;
-  }
+.photo__picture {
+  position: relative;
+  display: block;
+}
 
-  &__picture-hit img {
-    width: 100%;
-  }
+.photo__mark {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 20px;
+  width: 140px;
+  height: 35px;
+  text-transform: uppercase;
+  color: @color-second;
+  background-color: @color-fourth;
+  font-size: 12px;
+  line-height: 35px;
+  text-align: center;
+}
 
-  &__picture-hit::before {
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    right: 0;
-    display: flex;
-    width: 140px;
-    height: 35px;
-    margin-right: 20px;
-    content: "Панорама дня";
-    text-transform: uppercase;
-    color: #ffffff;
-    background-color: @pink;
-    font-size: 12px;
-    line-height: 24px;
+.photo__info {
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 18px;
+  padding-bottom: 25px;
+  padding-left: 18px;
+  background-color: @color-silver-second;
+  font-size: 14px;
+  line-height: 24px;
 
-    justify-content: center;
-    align-items: center;
+  &:last-child {
+    margin-bottom: 0;
   }
+}
 
-  &__picture {
-    display: block;
-    font-size: 0;
-  }
+.photo__name {
+  margin: 0;
+  font-weight: 700;
+}
 
-  &__picture img {
-    width: 100%;
-  }
+.photo__time {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.photo__comment {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.photo__handler {
+  margin: 0;
+  text-transform: uppercase;
+  color: @color-fourth;
+  font-size: 12px;
+  display: flex;
+}
+
+.photo__like {
+  display: flex;
+  align-items: center;
+}
+
+.photo__like .icon {
+  margin-right: 20px;
 }

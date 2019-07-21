@@ -1,29 +1,97 @@
 .button {
   display: block;
-  padding: 15px;
+  padding: 0 15px;
+  cursor: pointer;
+  transition: @transition;
   text-align: center;
   text-decoration: none;
-  color: @color-second;
-  border: 3px solid @color-second;
   border-radius: 30px;
   background-color: transparent;
   font-size: 18px;
   font-weight: 700;
-  line-height: 18px;
-  transition: @trasition;
 
-  &:hover,
-  &:focus {
+  &_brand {
+    color: @color-fourth;
+    border: 3px solid @color-fourth;
+  }
+
+  &_brand:hover,
+  &_brand:focus {
+    color: @color-text-second;
+    background-color: @color-fourth;
+  }
+
+  &_brand:active {
+    color: @color-silver-fourth;
+  }
+
+
+  &_first {
+    color: @color-text-second;
+    border: 3px solid @color-second;
+  }
+
+  &_first:hover,
+  &_first:focus {
     color: @color-fourth;
     background-color: @color-second;
   }
 
-  &:active {
+  &_first:active {
     color: @color-seventh;
   }
 
-  &_first {
-    max-width: 360px;
-    margin: 0 auto;
+  &_second {
+    width: 100%;
+    padding: 0 14px;
+    text-transform: uppercase;
+    color: @color-text-second;
+    border: none;
+    border-radius: 3px;
+    background-color: @color-brand;
+    line-height: 30px;
+  }
+
+  &_second:hover,
+  &_second:focus {
+    color: @color-text-second;
+    background-color: @color-brand-second;
+  }
+
+  &_second:active {
+    color: @color-silver-fourth;
+  }
+
+  &_second:disabled {
+    cursor: auto;
+    pointer-events: none;
+    background-color: @color-silver-second;
+  }
+
+  &_third {
+    color: @color-black-first;
+    border: 3px solid @color-black-first;
+    background-color: transparent;
+  }
+
+  &_third:hover,
+  &_third:focus {
+    color: @color-black-second;
+    border: 3px solid @color-black-second;
+    background-color: transparent;
+  }
+
+  &_third:active {
+    color: @color-silver-fourth;
+    background-color: @color-black-second;
+    border: 3px solid transparent;
+  }
+
+  &_size_l {
+    line-height: 55px;
+  }
+
+  &_size_xl {
+    line-height: 64px;
   }
 }
