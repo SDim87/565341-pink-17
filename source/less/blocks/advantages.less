@@ -34,6 +34,7 @@
     margin: 0 auto;
     content: "";
     background-image: url("../../img/iphone-screen-mobile@1x.png");
+    background-repeat: no-repeat;
 
     @media (min-width: @tablet) {
       z-index: 10;
@@ -114,15 +115,21 @@
 }
 
 .advantages__info {
+  text-align: center;
+
+  @media (min-width: @tablet) {
+    text-align: left;
+  }
+
   @media (min-width: @desktop) {
     padding: 53px 30px 0;
+    text-align: center;
   }
 }
 
 .advantages__title {
   margin: 0;
   margin-bottom: 13px;
-  text-align: center;
   color: @color-black;
   font-size: 18px;
   font-weight: 700;
@@ -136,7 +143,6 @@
 }
 
 .advantages__text {
-  text-align: center;
   font-size: 14px;
   line-height: 24px;
 
