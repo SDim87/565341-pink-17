@@ -4,12 +4,25 @@
     font-weight: 300;
     line-height: 1.5;
     color: @color-text-second;
+
+    @media (max-width: @tablet) {
+      font-size: 50px;
+    }
   }
 
-  &_wrap_center {
-    display: block;
-    margin: auto;
-    text-align: center;
+  &_two {
+    font-weight: 300;
+    line-height: 1.5;
+    color: @color-text-second;
+
+    @media (min-width: @tablet) {
+      font-size: 40px;
+      line-height: 1.25;
+    }
+
+    @media (min-width: @desktop) {
+      font-size: 50px;
+    }
   }
 
   &_size-m {
@@ -18,5 +31,31 @@
 
   &_size-l {
     max-width: 230px;
+  }
+
+  &_wrap_center {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+
+  &_centered {
+    text-align: center;
+  }
+
+  &_indent_l {
+    margin-bottom: 24px;
+
+    @media (min-width: @desktop) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &_none_mob {
+    display: none;
+
+    @media (min-width: @tablet) {
+      display: block;
+    }
   }
 }

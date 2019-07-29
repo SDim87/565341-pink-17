@@ -4,11 +4,34 @@
   &_logo-mobile {
     width: 75px;
     height: 23px;
+
+    @media (min-width: @tablet) {
+      display: none;
+    }
   }
 
   &_logo-tablet {
     width: 147px;
     height: 40px;
+    display: none;
+
+    @media (min-width: @tablet) {
+      display: block;
+    }
+
+    @media (min-width: @desktop) {
+      display: none;
+    }
+  }
+
+  &_logo-desktop {
+    width: 147px;
+    height: 40px;
+    display: none;
+
+    @media (min-width: @desktop) {
+      display: block;
+    }
   }
 
   &_logo-academy {
@@ -40,6 +63,16 @@
     height: 23px;
     opacity: 1;
     transform: scale(1);
+  }
+
+  &_study {
+    width: 238px;
+    height: 276px;
+
+    @media (min-width: @desktop) {
+      width: 298px;
+      height: 345px;
+    }
   }
 
   &_social {
@@ -85,5 +118,9 @@
 
   &_fifth {
     fill: @color-ninth;
+  }
+
+  &_sixth {
+    fill: @color-silver-first;
   }
 }

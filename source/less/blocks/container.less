@@ -1,4 +1,21 @@
 .container {
   padding-right: 20px;
   padding-left: 20px;
+
+  @media (min-width: @desktop) {
+    max-width: 940px;
+    margin: 0 auto;
+  }
+
+  &_header {
+    padding-right: 0;
+    padding-left: 0;
+
+    @media (min-width: @desktop) {
+      padding-right: 20px;
+      padding-left: 20px;
+      display: flex;
+      align-items: center;
+    }
+  }
 }

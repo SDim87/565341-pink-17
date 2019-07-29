@@ -1,9 +1,22 @@
 .footer {
   padding: 40px 0;
-  text-align: center;
 
   &_none-mobile {
     display: none;
+
+    @media (min-width: @tablet) {
+      display: block;
+      padding: 35px 0;
+    }
+  }
+}
+
+.footer__wrapper {
+  text-align: center;
+
+  @media (min-width: @tablet) {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -11,6 +24,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (min-width: @tablet) {
+    font-size: 14px;
+    line-height: 1.29;
+  }
 }
 
 .footer__copyright span {

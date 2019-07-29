@@ -1,0 +1,49 @@
+.link {
+  position: relative;
+  transition: @transition;
+  text-decoration: none;
+  color: @color-fourth;
+
+  &:hover,
+  &:focus {
+    color: @color-main;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    content: "";
+    transition: @transition;
+    background-color: @color-fourth;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: @color-main;
+  }
+
+  &:active::before {
+    opacity: 0;
+  }
+
+  &_second::before {
+    display: none;
+  }
+
+  &_size_l {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.25;
+  }
+
+  &_block {
+    display: block;
+  }
+}

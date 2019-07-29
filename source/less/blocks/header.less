@@ -2,6 +2,12 @@
   background-color: @color-sixth;
   position: relative;
   z-index: 50;
+
+  @media (min-width: @desktop) {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
 }
 
 .header__wrapper {
@@ -22,6 +28,10 @@
     100% {
       background-color: transparent;
     }
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0;
   }
 }
 
@@ -44,11 +54,19 @@
   height: 66px;
   position: relative;
   z-index: 100;
+
+  @media (min-width: @tablet) {
+    height: 110px;
+  }
 }
 
 .header__btn {
   display: flex;
   position: relative;
+
+  @media (min-width: @desktop) {
+    display: none;
+  }
 }
 
 .header__btn:hover .icon,

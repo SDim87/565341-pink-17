@@ -1,72 +1,63 @@
 .contacts {
   position: relative;
-  padding-top: 45px;
-  padding-bottom: 40px;
+  padding: 45px 0 40px;
   text-align: center;
+
+  @media (min-width: @tablet) {
+    padding: 45px 0 30px;
+  }
+}
+
+.contacts__wrapper {
+  @media (min-width: @tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
 }
 
 .contacts__title {
-  margin: 0;
   margin-bottom: 35px;
   font-size: 24px;
   font-weight: 300;
+  line-height: 1.2;
+
+  @media (min-width: @tablet) {
+    width: 100%;
+    margin-bottom: 43px;
+    font-size: 40px;
+  }
+}
+
+.contacts__group {
+  @media (min-width: @tablet) {
+   display: flex;
+   min-width: 525px;
+   justify-content: space-between;
+  }
 }
 
 .contacts__item {
   display: block;
-  margin: 0;
-  margin-bottom: 25px;
   font-size: 18px;
   font-weight: 700;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.contacts__link {
-  display: block;
-  margin-top: 5px;
-  text-decoration: none;
-  color: @color-fourth;
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 29px;
-  transition: @transition;
-
-  &:hover,
-  &:focus {
-    color: @color-main;
+  @media (min-width: @tablet) {
+    line-height: 1.5;
   }
 
-  &:active {
-    opacity: 0.3;
-  }
-}
+  &_indent {
+    margin-bottom: 23px;
 
-@media (min-width: @tablet-width) {
-  .contacts {
-    display: flex;
-    padding-bottom: 33px;
-
-    flex-wrap: wrap;
-    justify-content: space-between;
+    @media (min-width: @tablet) {
+      margin-bottom: 48px;
+    }
   }
 
-  .contacts__title {
-    width: 100%;
-    margin-bottom: 47px;
-    font-size: 40px;
-  }
-
-  .contacts__item {
-    width: 300px;
-
-    &:last-child {
-      width: 250px;
-      margin-top: 26px;
-      margin-right: auto;
-      margin-left: auto;
+  &_width_s {
+    @media (min-width: @tablet) {
+     max-width: 270px;
     }
   }
 }

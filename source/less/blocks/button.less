@@ -29,6 +29,10 @@
   &_first {
     color: @color-text-second;
     border: 3px solid @color-second;
+
+    @media (min-width: @desktop) {
+      font-size: 21px;
+    }
   }
 
   &_first:hover,
@@ -88,7 +92,7 @@
   }
 
   &_size_l {
-    line-height: 55px;
+    line-height: 50px;
   }
 
   &_size_xl {

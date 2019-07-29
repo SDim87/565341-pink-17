@@ -11,78 +11,92 @@
 
 <body class="body">
   <header class="header js-header is-no-js">
-    <div class="header__wrapper">
-      <div class="header__top">
-        <a class="logo logo_mobile" href="index.html">
-          <svg class="icon icon_second icon_logo-mobile">
-            <use xlink:href="img/sprite.svg#logo-pink-white-mobile"></use>
-          </svg>
-        </a>
-        <button class="header__btn js-header__btn">
-          <svg class="icon icon_second icon_burger js-icon_toggle is-opened">
-            <use xlink:href="img/sprite.svg#icon-menu-burger"></use>
-          </svg>
-          <svg class="icon icon_second icon_close js-icon_toggle">
-            <use xlink:href="img/sprite.svg#icon-menu-cross"></use>
-          </svg>
-        </button>
+    <div class="container container_header">
+      <div class="header__wrapper">
+        <div class="header__top">
+          <a class="logo logo_header" href="index.html">
+            <svg class="icon icon_second icon_logo-mobile">
+              <use xlink:href="img/sprite.svg#logo-pink-white-mobile"></use>
+            </svg>
+            <svg class="icon icon_second icon_logo-tablet">
+              <use xlink:href="img/sprite.svg#logo-pink-white-tablet"></use>
+            </svg>
+            <svg class="icon icon_second icon_logo-desktop">
+              <use xlink:href="img/sprite.svg#logo-pink-white-desktop"></use>
+            </svg>
+          </a>
+          <button class="header__btn js-header__btn">
+            <svg class="icon icon_second icon_burger js-icon_toggle is-opened">
+              <use xlink:href="img/sprite.svg#icon-menu-burger"></use>
+            </svg>
+            <svg class="icon icon_second icon_close js-icon_toggle">
+              <use xlink:href="img/sprite.svg#icon-menu-cross"></use>
+            </svg>
+          </button>
+        </div>
       </div>
+      <nav class="nav js-nav is-no-js">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link is-active">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="photo.html">Фотографии</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="form.html">Конкурс</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="nav js-nav is-no-js">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link is-active">Главная</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="photo.html">Фотографии</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="form.html">Конкурс</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">Html Academy</a>
-        </li>
-      </ul>
-    </nav>
   </header>
   <main class="main">
     <section class="banner">
-      <div class="banner__top">
-        <picture>
-          <!-- <source src="" media="(min-width: 600px)"> -->
-          <img class="image image_banner" src="./img/iphone-hand-mobile@1x.png" alt="Приложение в телефоне"
-            style="position: absolute; bottom: 0; width: 258px;">
-        </picture>
-      </div>
-      <article class="load">
-        <div class="container">
-          <a class="button button_first button_size_l" href="#">Скачать приложение</a>
-          <ul class="load__list">
-            <li class="load__item">
-              <a class="load__link" href="#">
-                <svg class="icon">
-                  <use xlink:href="img/sprite.svg#logo-apple"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="load__item">
-              <a class="load__link" href="#">
-                <svg class="icon">
-                  <use xlink:href="img/sprite.svg#logo-android"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="load__item">
-              <a class="load__link" href="#">
-                <svg class="icon">
-                  <use xlink:href="img/sprite.svg#logo-microsoft"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-          <p class="load__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      <div class="container">
+        <div class="banner__top">
+          <div class="banner__img">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/iphone-hand-desktop@1x.png">
+              <source media="(min-width: 660px)" srcset="./img/iphone-hand-tablet@1x.png">
+              <img class="image" src="./img/iphone-hand-mobile@1x.png" alt="Приложение в iphone">
+            </picture>
+          </div>
         </div>
-      </article>
+        <article class="load">
+          <div class="container">
+            <h1 class="title title_two title_centered title_indent_l title_none_mob">Взгляните на&nbsp;жизнь иначе!</h1>
+            <a class="button button_first button_size_l" href="https://www.apple.com/itunes/" target="_blank">Скачать
+              приложение</a>
+            <ul class="load__list">
+              <li class="load__item">
+                <a class="load__link" href="https://www.apple.com/itunes/" target="_blank">
+                  <svg class="icon">
+                    <use xlink:href="img/sprite.svg#logo-apple"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="load__item">
+                <a class="load__link" href="https://play.google.com/store/apps" target="_blank">
+                  <svg class="icon">
+                    <use xlink:href="img/sprite.svg#logo-android"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="load__item">
+                <a class="load__link" href="https://www.microsoft.com/en-us/store/apps/windows" target="_blank">
+                  <svg class="icon">
+                    <use xlink:href="img/sprite.svg#logo-microsoft"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <p class="load__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          </div>
+        </article>
+      </div>
     </section>
     <section class="offer">
       <div class="container">
@@ -95,40 +109,59 @@
     </section>
     <section class="advantages">
       <div class="container">
-        <ul class="advantages__list">
-          <li class="advantages__item">
-            <h3 class="advantages__title">Поднимает настроение</h3>
-            <p class="advantages__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в
-              несколько
-              кликов!</p>
-          </li>
-          <li class="advantages__item">
-            <h3 class="advantages__title">Меняет мир вокруг</h3>
-            <p class="advantages__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить
-              эффект</p>
-          </li>
-          <li class="advantages__item">
-            <h3 class="advantages__title">Заводит новых друзей</h3>
-            <p class="advantages__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
-            </p>
-          </li>
-        </ul>
-        <div class="advantages__images">
-          <picture>
-            <img class="advantages__img" src="./img/iphone-screen-mobile@1x.png" alt="Изображение iphone">
-          </picture>
+        <div class="advantages__wrap">
+          <ul class="advantages__list">
+            <li class="advantages__item advantages__item_first">
+              <div class="advantages__info">
+                <h3 class="advantages__title">Поднимает настроение</h3>
+                <p class="advantages__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в
+                  несколько кликов!</p>
+              </div>
+            </li>
+            <li class="advantages__item advantages__item_second">
+              <div class="advantages__info">
+                <h3 class="advantages__title">Меняет мир вокруг</h3>
+                <p class="advantages__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить
+                  эффект</p>
+              </div>
+            </li>
+            <li class="advantages__item advantages__item_third">
+              <div class="advantages__info">
+                <h3 class="advantages__title">Заводит новых друзей</h3>
+                <p class="advantages__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите
+                  новых</p>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
+    <article class="study">
+      <div class="container">
+        <div class="study__wrapper">
+          <div class="study__timer">
+            <svg class="icon icon_study icon_sixth">
+              <use xlink:href="img/sprite.svg#icon-timer"></use>
+            </svg>
+          </div>
+          <div class="study__content">
+            <h2 class="study__title">Эффект на&nbsp;24&nbsp;часа!</h2>
+            <p class="study__text">Британские ученые провели исследования и доказали, что положительный эффект от
+              использования приложения длится целые сутки!</p>
+            <a class="link" href="#">Узнать больше об исследовании</a>
+          </div>
+        </div>
+      </div>
+    </article>
     <section class="reivew">
       <div class="container">
-        <div class="reivew__slider">
+        <div class="reivew__wrapper">
           <h3 class="reivew__title">Николай Петров</h3>
-          <p class="reivew__title-description">25 лет, водитель трамвая</p>
+          <p class="reivew__info">25 лет, водитель трамвая</p>
           <p class="reivew__content">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
             серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           <ul class="pagination">
-            <li class="pagination__item pagination__item_active">&bull;</li>
+            <li class="pagination__item is-active">&bull;</li>
             <li class="pagination__item">&bull;</li>
             <li class="pagination__item">&bull;</li>
           </ul>
@@ -140,6 +173,11 @@
     </section>
     <section class="price">
       <div class="price__slider">
+        <ul class="price__list price__list_first">
+          <li class="price__item price__item_first price__item_bd-top">Розовый фильтр</li>
+          <li class="price__item price__item_first">Смайлики</li>
+          <li class="price__item price__item_first">Комментарии</li>
+        </ul>
         <ul class="price__list">
           <li class="price__item price__item_top">База<br><span class="price__money">1,99 USD</span></li>
           <li class="price__item">
@@ -205,74 +243,70 @@
           </li>
         </ul>
       </div>
-      <ul class="pagination">
-        <li class="pagination__item pagination__item_active">&bull;</li>
+      <ul class="pagination pagination_none_table">
         <li class="pagination__item">&bull;</li>
+        <li class="pagination__item is-active">&bull;</li>
         <li class="pagination__item">&bull;</li>
       </ul>
     </section>
     <section class="contacts">
       <div class="container">
-        <p class="contacts__title">Остались вопросы?<br>Свяжитесь с нами!</p>
-        <b class="contacts__item">Звоните:
-          <a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
-        </b>
-        <b class="contacts__item">Пишите:
-          <a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </b>
-        <b class="contacts__item">Приезжайте в гости:
-          <a class="contacts__link" href="#">ул. Большая Конюшенная, 19/8</a>
-        </b>
+        <div class="contacts__wrapper">
+          <p class="contacts__title">Остались вопросы?<br>Свяжитесь с нами!</p>
+          <div class="contacts__group">
+            <p class="contacts__item contacts__item_indent">Звоните:
+              <a class="link link_second link_size_l link_block" href="tel:+78125556666">+7 (812) 555-66-66</a>
+            </p>
+            <p class="contacts__item contacts__item_indent">Пишите:
+              <a class="link link_second link_size_l link_block"
+                href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </p>
+          </div>
+          <p class="contacts__item contacts__item_width_s">Приезжайте в гости:
+            <a class="link link_second link_size_l link_block" href="#">ул. Большая Конюшенная, 19/8</a>
+          </p>
+        </div>
       </div>
       <div class="body__figure">
         <img class="image" src="./img/bg-triangle-white-footer.svg" alt="Фон блока">
       </div>
     </section>
-    <section class="map">
-      <!-- <imgс class="image" src="./img/bg-map-mobile@1x.png" alt="Понорама"> -->
-    </section>
-    <!--
-    <article class="study container">
-      <img class="study__timer" src="img/icon-timer.svg" width="240" height="276" alt="Таймер">
-      <div class="study__wrapper">
-        <h2 class="study__title">Эффект на&nbsp;24&nbsp;часа!</h2>
-        <p class="study__content">Британские ученые провели исследования и доказали, что положительный эффект от
-          использования приложения длится целые сутки!</p>
-        <a class="study__link" href="#">Узнать больше об исследовании</a>
-      </div>
-    </article>
-     -->
+    <section class="map"></section>
   </main>
   <footer class="footer footer_none-mobile">
-    <a class="logo logo_tablet" href="index.html">
-      <svg class="icon icon_logo-tablet icon_first">
-        <use xlink:href="img/sprite.svg#logo-pink-blue-mobile"></use>
-      </svg>
-    </a>
-    <div class="social social_indent">
-      <a class="social__item social__item_tw" href="#">Twitter
-        <svg class="icon icon_social icon_third">
-          <use xlink:href="img/sprite.svg#icon-twitter"></use>
-        </svg>
-      </a>
-      <a class="social__item social__item_fb" href="#">Facebook
-        <svg class="icon icon_social icon_third">
-          <use xlink:href="img/sprite.svg#icon-facebook"></use>
-        </svg>
-      </a>
-      <a class="social__item social__item_yt" href="#">YouTube
-        <svg class="icon icon_social icon_third">
-          <use xlink:href="img/sprite.svg#icon-youtube"></use>
-        </svg>
-      </a>
-    </div>
-    <div class="footer__copyright">
-      <span>Разработано</span>
-      <a class="logo logo_academy" href="https://htmlacademy.ru/intensive/adaptive">
-        <svg class="icon icon_logo-academy icon_third">
-          <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
-        </svg>
-      </a>
+    <div class="container">
+      <div class="footer__wrapper">
+        <a class="logo logo_footer" href="index.html">
+          <svg class="icon icon_logo-tablet icon_first">
+            <use xlink:href="img/sprite.svg#logo-pink-blue-mobile"></use>
+          </svg>
+        </a>
+        <div class="social social_indent">
+          <a class="social__item social__item_tw" href="#">Twitter
+            <svg class="icon icon_social icon_third">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
+          <a class="social__item social__item_fb" href="#">Facebook
+            <svg class="icon icon_social icon_third">
+              <use xlink:href="img/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
+          <a class="social__item social__item_yt" href="#">YouTube
+            <svg class="icon icon_social icon_third">
+              <use xlink:href="img/sprite.svg#icon-youtube"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="footer__copyright">
+          <span>Разработано</span>
+          <a class="logo logo_academy" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg class="icon icon_logo-academy icon_third">
+              <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
   <script src="scripts/scripts.js"></script>

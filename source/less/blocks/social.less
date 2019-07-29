@@ -5,6 +5,11 @@
 
   &_indent {
     margin: 40px 0;
+
+    @media (min-width: @tablet) {
+      margin: 0;
+      margin-left: -20px;
+    }
   }
 }
 
@@ -16,6 +21,7 @@
   border: 3px solid @color-black-first;
   border-radius: 50%;
   font-size: 0;
+  box-sizing: border-box;
 
   &:not(:last-child) {
     margin-right: 12px;
@@ -33,15 +39,4 @@
 
 .social__item .icon {
   margin: auto;
-}
-
-
-@media (min-width: @tablet-width) {
-  .social {
-    min-width: 320px;
-
-    &_indent {
-      margin-bottom: 0;
-    }
-  }
 }
