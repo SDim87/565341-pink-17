@@ -11,172 +11,209 @@
 
 <body class="body">
   <header class="header js-header is-no-js">
-    <div class="header__wrapper">
-      <div class="header__top">
-        <a class="logo logo_mobile" href="index.html">
-          <svg class="icon icon_second icon_logo-mobile">
-            <use xlink:href="img/sprite.svg#logo-pink-white-mobile"></use>
-          </svg>
-        </a>
-        <button class="header__btn js-header__btn">
-          <svg class="icon icon_second icon_burger js-icon_toggle is-opened">
-            <use xlink:href="img/sprite.svg#icon-menu-burger"></use>
-          </svg>
-          <svg class="icon icon_second icon_close js-icon_toggle">
-            <use xlink:href="img/sprite.svg#icon-menu-cross"></use>
-          </svg>
-        </button>
+    <div class="container container_header">
+      <div class="header__wrapper">
+        <div class="header__top">
+          <a class="logo logo_header" href="index.html">
+            <svg class="icon icon_second icon_logo-mobile">
+              <use xlink:href="img/sprite.svg#logo-pink-white-mobile"></use>
+            </svg>
+            <svg class="icon icon_second icon_logo-tablet">
+              <use xlink:href="img/sprite.svg#logo-pink-white-tablet"></use>
+            </svg>
+            <svg class="icon icon_second icon_logo-desktop">
+              <use xlink:href="img/sprite.svg#logo-pink-white-desktop"></use>
+            </svg>
+          </a>
+          <button class="header__btn js-header__btn">
+            <svg class="icon icon_second icon_burger js-icon_toggle is-opened">
+              <use xlink:href="img/sprite.svg#icon-menu-burger"></use>
+            </svg>
+            <svg class="icon icon_second icon_close js-icon_toggle">
+              <use xlink:href="img/sprite.svg#icon-menu-cross"></use>
+            </svg>
+          </button>
+        </div>
       </div>
+      <nav class="nav js-nav is-no-js">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link is-active">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="photo.html">Фотографии</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="form.html">Конкурс</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="nav js-nav is-no-js">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link" href="index.html">Главная</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="photo.html">Фотографии</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link is-active">Конкурс</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">Html Academy</a>
-        </li>
-      </ul>
-    </nav>
   </header>
   <main class="main">
     <section class="banner">
       <div class="banner__top banner__top_inner">
         <div class="banner__title">
-          <h1 class="title title_one title_wrap_center">Конкурс на самое безбашенное путешествие с Пинк</h1>
+          <h1 class="title title_one title_wrap_center title_width_l">Конкурс на самое безбашенное путешествие с Пинк</h1>
         </div>
       </div>
     </section>
     <form class="form" action="https://echo.htmlacademy.ru" method="post">
-      <section class="form__section">
+      <section class="form__section form__section_name">
         <div class="container">
           <p class="form__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу
-            бонусную карту!</p>
-          <div class="form__group">
+            бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></p>
+          <div class="form__group form__group_text">
             <label class="form__label" for="surname">Фамилия:</label>
             <input class="form__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию *" required>
           </div>
-          <div class="form__group">
+          <div class="form__group form__group_text">
             <label class="form__label" for="first-name">Имя:</label>
             <input class="form__input" type="text" name="first-name" id="first-name" placeholder="Введите ваше имя *"
               required>
           </div>
-          <div class="form__group">
+          <div class="form__group form__group_text">
             <label class="form__label" for="patronymic">Отчество:</label>
             <input class="form__input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
           </div>
         </div>
       </section>
-      <section class="form__section form__section_bg">
+      <section class="form__section form__section_checkbox">
         <div class="container">
-          <h4 class="form__title">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</h4>
-          <div class="form__group">
-            <input class="form__check visually-hidden" type="checkbox" name="selfie-shark" id="selfie-shark">
-            <label class="form__label form__label_check" for="selfie-shark">Сделал селфи с акулой</label>
-          </div>
-          <div class="form__group">
-            <input class="form__check visually-hidden" type="checkbox" name="tanned-beach" id="tanned-beach">
-            <label class="form__label form__label_check" for="tanned-beach">Обгорел на пляже</label>
-          </div>
-          <div class="form__group">
-            <input class="form__check visually-hidden" type="checkbox" name="chuck-norris" id="chuck-norris">
-            <label class="form__label form__label_check" for="chuck-norris">Видел Чака Норриса</label>
-          </div>
-          <div class="form__group">
-            <input class="form__check visually-hidden" type="checkbox" name="buy-souvenirs" id="buy-souvenirs">
-            <label class="form__label form__label_check" for="buy-souvenirs">Накупил сувениров</label>
-          </div>
-          <div class="form__group">
-            <input class="form__check visually-hidden" type="checkbox" name="held-tower" id="held-tower">
-            <label class="form__label form__label_check" for="held-tower">Удержал башню</label>
-          </div>
-          <div class="form__group">
-            <input class="form__check visually-hidden" type="checkbox" name="broken-hotel" id="broken-hotel">
-            <label class="form__label form__label_check" for="broken-hotel">Разгромил отель</label>
+          <div class="form__inner">
+            <div class="form__box">
+              <h4 class="form__title">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</h4>
+            </div>
+            <div class="form__group form__group_check">
+              <input class="form__check visually-hidden" type="checkbox" name="selfie-shark" id="selfie-shark">
+              <label class="form__label form__label_check" for="selfie-shark">Сделал селфи с акулой</label>
+            </div>
+            <div class="form__group form__group_check">
+              <input class="form__check visually-hidden" type="checkbox" name="tanned-beach" id="tanned-beach">
+              <label class="form__label form__label_check" for="tanned-beach">Обгорел на пляже</label>
+            </div>
+            <div class="form__group form__group_check">
+              <input class="form__check visually-hidden" type="checkbox" name="chuck-norris" id="chuck-norris">
+              <label class="form__label form__label_check" for="chuck-norris">Видел Чака Норриса</label>
+            </div>
+            <div class="form__group form__group_check">
+              <input class="form__check visually-hidden" type="checkbox" name="buy-souvenirs" id="buy-souvenirs">
+              <label class="form__label form__label_check" for="buy-souvenirs">Накупил сувениров</label>
+            </div>
+            <div class="form__group form__group_check">
+              <input class="form__check visually-hidden" type="checkbox" name="held-tower" id="held-tower">
+              <label class="form__label form__label_check" for="held-tower">Удержал башню</label>
+            </div>
+            <div class="form__group form__group_check">
+              <input class="form__check visually-hidden" type="checkbox" name="broken-hotel" id="broken-hotel">
+              <label class="form__label form__label_check" for="broken-hotel">Разгромил отель</label>
+            </div>
           </div>
         </div>
       </section>
-
-      <section class="form__section">
+      <section class="form__section form__section_contacts">
         <div class="container">
-          <div class="form__group">
-            <label class="form__label" for="phone">Номер телефона</label>
-            <input class="form__input" type="tel" name="phone" id="phone" placeholder="Номер, пожалуйста">
-          </div>
-          <div class="form__group">
-            <label class="form__label" for="mail">Адрес почты</label>
-            <input class="form__input" type="email" name="mail" id="mail" placeholder="Введите почту *" required>
+          <div class="form__inner form__inner_indent">
+            <div class="form__box form__box_none-mobile">
+              <h4 class="form__title form__title_indent">Контактная информация</h4>
+            </div>
+            <div class="form__group form__group_contacts">
+              <label class="form__label form__label_contacts" for="phone">Номер телефона</label>
+              <div class="form__inside form__inside_tel">
+                <input class="form__input" type="tel" name="phone" id="phone" placeholder="Номер, пожалуйста">
+              </div>
+            </div>
+            <div class="form__group form__group_contacts">
+              <label class="form__label form__label_contacts" for="mail">Адрес почты</label>
+              <div class="form__inside form__inside_mail">
+                <input class="form__input" type="email" name="mail" id="mail" placeholder="Введите почту *" required>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section class="form__section form__section_bg">
+      <section class="form__section form__section_radio">
         <div class="container">
-          <h4 class="form__title">С каким приложением путешествовали?</h4>
-          <div class="form__group">
-            <input class="form__check visually-hidden" type="radio" name="radio-platform" id="ios">
-            <label class="form__label form__label_check form__label_radio" for="ios">Pink для iOS</label>
-          </div>
-          <div class="form__group">
-            <input class="form__check visually-hidden" type="radio" name="radio-platform" id="android">
-            <label class="form__label form__label_check form__label_radio" for="android">Pink на Android</label>
-          </div>
-          <div class="form__group">
-            <input class="form__check visually-hidden" type="radio" name="radio-platform" id="windows">
-            <label class="form__label form__label_check form__label_radio" for="windows">Windows Phone</label>
+          <div class="form__inner">
+            <div class="form__box">
+              <h4 class="form__title">С каким приложением путешествовали?</h4>
+            </div>
+            <div class="form__group form__group_radio">
+              <input class="form__check visually-hidden" type="radio" name="radio-platform" id="ios" checked>
+              <label class="form__label form__label_check form__label_radio" for="ios">Pink для iOS</label>
+            </div>
+            <div class="form__group form__group_radio">
+              <input class="form__check visually-hidden" type="radio" name="radio-platform" id="android">
+              <label class="form__label form__label_check form__label_radio" for="android">Pink на Android</label>
+            </div>
+            <div class="form__group form__group_radio">
+              <input class="form__check visually-hidden" type="radio" name="radio-platform" id="windows">
+              <label class="form__label form__label_check form__label_radio" for="windows">Windows Phone</label>
+            </div>
           </div>
         </div>
       </section>
-      <section class="form__section">
+      <section class="form__section form__section_descr">
         <div class="container">
-          <h4 class="form__title form__title_indent">Опишите свои эмоции</h4>
-          <textarea class="form__input form__input_textarea" name="comment"
-            placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          <div class="form__inner form__inner_indent_l">
+            <div class="form__box form__box_none-mobile">
+              <h4 class="form__title form__title_indent_s">Опишите свои эмоции</h4>
+            </div>
+            <textarea class="form__input form__input_textarea" name="comment"
+              placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          </div>
         </div>
       </section>
-      <section class="form__section form__section_indent">
+      <section class="form__section form__section_btn">
         <div class="container">
-          <button class="button button_second button_size_xl" type="submit">Отправить форму</button>
-          <p class="form__required"><span class="form__mark">*</span> &mdash; обязательные поля</p>
+          <div class="form__btn">
+            <button class="button button_second button_size_xl" type="submit">Отправить форму</button>
+            <p class="form__required"><span class="form__mark">*</span> &mdash; обязательные поля</p>
+          </div>
         </div>
       </section>
     </form>
   </main>
   <footer class="footer">
-    <a class="logo logo_footer" href="index.html">
-      <svg class="icon icon_logo-tablet icon_first">
-        <use xlink:href="img/sprite.svg#logo-pink-blue-mobile"></use>
-      </svg>
-    </a>
-    <div class="social social_indent">
-      <a class="social__item social__item_tw" href="#">Twitter
-        <svg class="icon icon_social icon_third">
-          <use xlink:href="img/sprite.svg#icon-twitter"></use>
-        </svg>
-      </a>
-      <a class="social__item social__item_fb" href="#">Facebook
-        <svg class="icon icon_social icon_third">
-          <use xlink:href="img/sprite.svg#icon-facebook"></use>
-        </svg>
-      </a>
-      <a class="social__item social__item_yt" href="#">YouTube
-        <svg class="icon icon_social icon_third">
-          <use xlink:href="img/sprite.svg#icon-youtube"></use>
-        </svg>
-      </a>
-    </div>
-    <div class="footer__copyright">
-      <span>Разработано</span>
-      <a class="logo logo_academy" href="https://htmlacademy.ru/intensive/adaptive">
-        <svg class="icon icon_logo-academy icon_third">
-          <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
-        </svg>
-      </a>
+    <div class="container">
+      <div class="footer__wrapper">
+        <a class="logo logo_footer" href="index.html">
+          <svg class="icon icon_logo-tablet icon_logo-tablet_footer icon_first">
+            <use xlink:href="img/sprite.svg#logo-pink-blue-mobile"></use>
+          </svg>
+          <svg class="icon icon_first icon_logo-desktop">
+            <use xlink:href="img/sprite.svg#logo-pink-blue-desktop"></use>
+          </svg>
+        </a>
+        <div class="social social_indent">
+          <a class="social__item social__item_tw" href="#">Twitter
+            <svg class="icon icon_social icon_third">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
+          <a class="social__item social__item_fb" href="#">Facebook
+            <svg class="icon icon_social icon_third">
+              <use xlink:href="img/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
+          <a class="social__item social__item_yt" href="#">YouTube
+            <svg class="icon icon_social icon_third">
+              <use xlink:href="img/sprite.svg#icon-youtube"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="footer__copyright">
+          <span>Разработано</span>
+          <a class="logo logo_academy" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg class="icon icon_logo-academy icon_third">
+              <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
   <script src="scripts/scripts.js"></script>

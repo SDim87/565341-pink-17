@@ -10,7 +10,8 @@
     }
   }
 
-  &_logo-tablet {
+  &_logo-tablet,
+  &_logo-desktop {
     width: 147px;
     height: 40px;
     display: none;
@@ -24,9 +25,11 @@
     }
   }
 
+  &_logo-tablet_footer {
+    display: block;
+  }
+
   &_logo-desktop {
-    width: 147px;
-    height: 40px;
     display: none;
 
     @media (min-width: @desktop) {
@@ -80,6 +83,16 @@
     height: 20px;
   }
 
+  &_quotes {
+    width: 79px;
+    height: 63px;
+  }
+
+  &_arrow {
+    width: 22px;
+    height: 41px;
+  }
+
   &_size_s {
     width: 13px;
     height: 13px;
@@ -122,5 +135,9 @@
 
   &_sixth {
     fill: @color-silver-first;
+  }
+
+  &_seventh {
+    fill: @color-silver-fifth;
   }
 }

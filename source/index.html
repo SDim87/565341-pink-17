@@ -121,7 +121,8 @@
             <li class="advantages__item advantages__item_second">
               <div class="advantages__info">
                 <h3 class="advantages__title">Меняет мир вокруг</h3>
-                <p class="advantages__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить
+                <p class="advantages__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы
+                  усилить
                   эффект</p>
               </div>
             </li>
@@ -156,6 +157,11 @@
     <section class="reivew">
       <div class="container">
         <div class="reivew__wrapper">
+          <div class="reivew__quotes">
+            <svg class="icon icon_quotes icon_seventh">
+              <use xlink:href="img/sprite.svg#icon-quotes"></use>
+            </svg>
+          </div>
           <h3 class="reivew__title">Николай Петров</h3>
           <p class="reivew__info">25 лет, водитель трамвая</p>
           <p class="reivew__content">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
@@ -165,6 +171,16 @@
             <li class="pagination__item">&bull;</li>
             <li class="pagination__item">&bull;</li>
           </ul>
+          <div class="reivew__arrow reivew__arrow_left">
+            <svg class="icon icon_arrow icon_first">
+              <use xlink:href="img/sprite.svg#icon-review-arrow-left"></use>
+            </svg>
+          </div>
+          <div class="reivew__arrow reivew__arrow_right">
+            <svg class="icon icon_arrow icon_first">
+              <use xlink:href="img/sprite.svg#icon-review-arrow-right"></use>
+            </svg>
+          </div>
         </div>
         <div class="body__figure">
           <img class="image" src="./img/bg-triangle-white.svg" alt="Фон блока">
@@ -251,21 +267,22 @@
     </section>
     <section class="contacts">
       <div class="container">
-        <div class="contacts__wrapper">
-          <p class="contacts__title">Остались вопросы?<br>Свяжитесь с нами!</p>
-          <div class="contacts__group">
-            <p class="contacts__item contacts__item_indent">Звоните:
-              <a class="link link_second link_size_l link_block" href="tel:+78125556666">+7 (812) 555-66-66</a>
-            </p>
-            <p class="contacts__item contacts__item_indent">Пишите:
-              <a class="link link_second link_size_l link_block"
-                href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </p>
-          </div>
-          <p class="contacts__item contacts__item_width_s">Приезжайте в гости:
+        <p class="contacts__title">Остались вопросы?<br>Свяжитесь с нами!</p>
+        <ul class="contacts__list">
+          <!-- В макете сбита центровка - tablet version -->
+          <li class="contacts__item">
+            <span>Звоните:</span>
+            <a class="link link_second link_size_l link_block" href="tel:+78125556666">+7 (812) 555-66-66</a>
+          </li>
+          <li class="contacts__item">
+            <span>Пишите:</span>
+            <a class="link link_second link_size_l link_block" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </li>
+          <li class="contacts__item">
+            <span>Приезжайте в гости:</span>
             <a class="link link_second link_size_l link_block" href="#">ул. Большая Конюшенная, 19/8</a>
-          </p>
-        </div>
+          </li>
+        </ul>
       </div>
       <div class="body__figure">
         <img class="image" src="./img/bg-triangle-white-footer.svg" alt="Фон блока">
@@ -279,6 +296,9 @@
         <a class="logo logo_footer" href="index.html">
           <svg class="icon icon_logo-tablet icon_first">
             <use xlink:href="img/sprite.svg#logo-pink-blue-mobile"></use>
+          </svg>
+          <svg class="icon icon_first icon_logo-desktop">
+            <use xlink:href="img/sprite.svg#logo-pink-blue-desktop"></use>
           </svg>
         </a>
         <div class="social social_indent">

@@ -2,10 +2,10 @@
   &_one {
     font-size: 24px;
     font-weight: 300;
-    line-height: 1.5;
+    line-height: 1.25;
     color: @color-text-second;
 
-    @media (max-width: @tablet) {
+    @media (min-width: @tablet) {
       font-size: 50px;
     }
   }
@@ -35,7 +35,7 @@
 
   &_wrap_center {
     display: block;
-    margin: auto;
+    margin: 32px auto 0;
     text-align: center;
   }
 
@@ -56,6 +56,12 @@
 
     @media (min-width: @tablet) {
       display: block;
+    }
+  }
+
+  &_width_l {
+    @media (min-width: @desktop) {
+      max-width: 900px;
     }
   }
 }

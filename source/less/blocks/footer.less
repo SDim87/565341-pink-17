@@ -1,12 +1,19 @@
 .footer {
   padding: 40px 0;
 
+  @media (min-width: @tablet) {
+    padding: 35px 0;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 74px 0;
+  }
+
   &_none-mobile {
     display: none;
 
     @media (min-width: @tablet) {
       display: block;
-      padding: 35px 0;
     }
   }
 }
@@ -33,4 +40,9 @@
 
 .footer__copyright span {
   margin-right: 15px;
+  font-size: 14px;
+
+  @media (min-width: @desktop) {
+    font-size: 18px;
+  }
 }

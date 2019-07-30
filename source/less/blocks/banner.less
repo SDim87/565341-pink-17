@@ -39,6 +39,14 @@
 
   &_inner {
     min-height: 237px;
+
+    @media (min-width: @tablet) {
+      padding: 78px 0;
+    }
+
+    @media (min-width: @desktop) {
+      padding: 140px 0 98px;
+    }
   }
 }
 
@@ -64,6 +72,10 @@
   display: flex;
   width: 100%;
   padding: 66px 20px 0;
+
+  @media (min-width: @desktop) {
+    padding: 0;
+  }
 }
 
 /* IE11 */
