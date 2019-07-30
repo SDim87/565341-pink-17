@@ -12,9 +12,9 @@
 
   &_logo-tablet,
   &_logo-desktop {
+    display: none;
     width: 147px;
     height: 40px;
-    display: none;
 
     @media (min-width: @tablet) {
       display: block;
@@ -55,17 +55,17 @@
   }
 
   &_close {
-    opacity: 0;
-    transform: scale(0);
     width: 0;
     height: 0;
+    transform: scale(0);
+    opacity: 0;
   }
 
   &_close.is-opened {
     width: 23px;
     height: 23px;
-    opacity: 1;
     transform: scale(1);
+    opacity: 1;
   }
 
   &_study {

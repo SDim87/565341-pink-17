@@ -1,9 +1,9 @@
 .pagination {
   display: flex;
+  margin-top: 33px;
 
   align-items: center;
   justify-content: center;
-  margin-top: 33px;
 
   @media (min-width: @desktop) {
     display: none;
@@ -22,11 +22,11 @@
   width: 6px;
   height: 6px;
   cursor: pointer;
+  transition: @transition;
   vertical-align: bottom;
   text-indent: 100%;
   border-radius: 50%;
   background-color: @color-main;
-  transition: @transition;
 
   &:not(.is-active) {
     opacity: 0.3;
@@ -46,12 +46,12 @@
   }
 
   &.is-active {
+    box-sizing: border-box;
     width: 12px;
     height: 12px;
+    pointer-events: none;
     border: 3px solid @color-main;
     background-color: transparent;
-    box-sizing: border-box;
-    pointer-events: none;
   }
 }
 

@@ -1,16 +1,18 @@
 .filter {
-  background-color: @color-silver-second;
   padding-top: 20px;
+  background-color: @color-silver-second;
 }
 
 .filter__group {
   display: flex;
-  justify-content: center;
   margin-top: 42px;
+
+  justify-content: center;
 }
 
 .filter__item {
   display: flex;
+
   align-items: center;
 
   &:not(:last-child) {
@@ -27,8 +29,9 @@
 }
 
 .filter__item.is-active .icon {
-  fill: @color-fourth;
   opacity: 1;
+
+  fill: @color-fourth;
 }
 
 .filter__item:hover .icon {
@@ -37,14 +40,14 @@
 
 .filter__range {
   display: flex;
+  max-width: 360px;
   min-height: 15px;
   margin: 32px auto 28px;
-  max-width: 360px;
 }
 
 .filter__buttons {
-  border-top: 1px solid @color-black-first;
   padding: 40px 20px;
+  border-top: 1px solid @color-black-first;
 }
 
 .filter__buttons .button:not(:last-child) {
