@@ -4,11 +4,37 @@
   &_logo-mobile {
     width: 75px;
     height: 23px;
+
+    @media (min-width: @tablet) {
+      display: none;
+    }
   }
 
-  &_logo-tablet {
+  &_logo-tablet,
+  &_logo-desktop {
+    display: none;
     width: 147px;
     height: 40px;
+
+    @media (min-width: @tablet) {
+      display: block;
+    }
+
+    @media (min-width: @desktop) {
+      display: none;
+    }
+  }
+
+  &_logo-tablet_footer {
+    display: block;
+  }
+
+  &_logo-desktop {
+    display: none;
+
+    @media (min-width: @desktop) {
+      display: block;
+    }
   }
 
   &_logo-academy {
@@ -29,22 +55,42 @@
   }
 
   &_close {
-    opacity: 0;
-    transform: scale(0);
     width: 0;
     height: 0;
+    transform: scale(0);
+    opacity: 0;
   }
 
   &_close.is-opened {
     width: 23px;
     height: 23px;
-    opacity: 1;
     transform: scale(1);
+    opacity: 1;
+  }
+
+  &_study {
+    width: 238px;
+    height: 276px;
+
+    @media (min-width: @desktop) {
+      width: 298px;
+      height: 345px;
+    }
   }
 
   &_social {
     width: 20px;
     height: 20px;
+  }
+
+  &_quotes {
+    width: 79px;
+    height: 63px;
+  }
+
+  &_arrow {
+    width: 22px;
+    height: 41px;
   }
 
   &_size_s {
@@ -85,5 +131,13 @@
 
   &_fifth {
     fill: @color-ninth;
+  }
+
+  &_sixth {
+    fill: @color-silver-first;
+  }
+
+  &_seventh {
+    fill: @color-silver-fifth;
   }
 }

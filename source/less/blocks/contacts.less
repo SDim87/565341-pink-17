@@ -1,72 +1,93 @@
 .contacts {
   position: relative;
-  padding-top: 45px;
-  padding-bottom: 40px;
+  padding: 45px 0 40px;
   text-align: center;
+
+  @media (min-width: @tablet) {
+    padding: 45px 0 30px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 65px 0 0;
+  }
+}
+
+.contacts__list {
+  list-style-type: none;
+
+  @media (min-width: @tablet) {
+    display: flex;
+    padding: 0 6px;
+
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0;
+  }
 }
 
 .contacts__title {
-  margin: 0;
   margin-bottom: 35px;
   font-size: 24px;
   font-weight: 300;
+  line-height: 1.2;
+
+  @media (min-width: @tablet) {
+    width: 100%;
+    margin-bottom: 43px;
+    font-size: 40px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 100%;
+    margin-bottom: 55px;
+    font-size: 50px;
+  }
 }
 
 .contacts__item {
   display: block;
-  margin: 0;
-  margin-bottom: 25px;
   font-size: 18px;
   font-weight: 700;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.contacts__link {
-  display: block;
-  margin-top: 5px;
-  text-decoration: none;
-  color: @color-fourth;
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 29px;
-  transition: @transition;
-
-  &:hover,
-  &:focus {
-    color: @color-main;
+  @media (min-width: @tablet) {
+    line-height: 1.5;
   }
 
-  &:active {
-    opacity: 0.3;
-  }
-}
+  &:not(:last-child) {
+    margin-bottom: 23px;
 
-@media (min-width: @tablet-width) {
-  .contacts {
-    display: flex;
-    padding-bottom: 33px;
-
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .contacts__title {
-    width: 100%;
-    margin-bottom: 47px;
-    font-size: 40px;
-  }
-
-  .contacts__item {
-    width: 300px;
-
-    &:last-child {
-      width: 250px;
-      margin-top: 26px;
-      margin-right: auto;
-      margin-left: auto;
+    @media (min-width: @tablet) {
+      margin-bottom: 0;
     }
+  }
+
+  &:last-child {
+    @media (min-width: @tablet) {
+      max-width: 270px;
+      margin-top: 46px;
+    }
+
+    @media (min-width: @desktop) {
+      max-width: 215px;
+      margin-top: 0;
+
+      order: 2;
+    }
+  }
+
+  &:nth-child(2) {
+    @media (min-width: @desktop) {
+      order: 3;
+    }
+  }
+}
+
+.contacts__item span {
+  @media (min-width: @desktop) {
+    display: inline-block;
+    margin-bottom: 20px;
   }
 }

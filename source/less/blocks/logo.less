@@ -10,31 +10,37 @@
     opacity: 0.3;
   }
 
-  &_mobile:active .icon {
+  &_header {
+    @media (min-width: @tablet) {
+      margin-top: -14px;
+    }
+  }
+
+  &_header:active .icon {
     fill: @color-second;
   }
 
-  &_tablet {
+  &_footer {
+    display: block;
     width: 147px;
     height: 40px;
-    display: block;
-    margin: 0 auto;
+    margin: -9px auto 0;
+
+    @media (min-width: @tablet) {
+      margin: 0;
+    }
+
+    @media (min-width: @desktop) {
+      margin-top: -5px;
+    }
   }
 
-  &_tablet:active .icon {
+  &_footer:active .icon {
     fill: @color-main;
   }
 
   &_academy:hover .icon,
   &_academy:focus .icon {
     fill: @color-main;
-  }
-}
-
-
-@media (min-width: @tablet-width) {
-  .logo {
-    // &[href]:active {
-    // }
   }
 }

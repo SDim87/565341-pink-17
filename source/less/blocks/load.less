@@ -1,14 +1,43 @@
 .load {
-  background-color: @color-main;
   padding: 28px 0 35px;
+  background-color: @color-main;
+
+  @media (min-width: @tablet) {
+    position: absolute;
+    top: 0;
+    width: 340px;
+    margin-top: 200px;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  @media (min-width: @desktop) {
+    width: 300px;
+    margin-top: 215px;
+  }
+}
+
+.load .container {
+  @media (min-width: @desktop) {
+    padding: 0;
+  }
 }
 
 .load__list {
-  list-style-type: none;
   display: flex;
+  max-width: 207px;
+  margin: 36px auto 20px;
+  list-style-type: none;
+
   justify-content: space-between;
-  margin: 32px auto 28px;
-  max-width: 230px;
+
+  @media (min-width: @tablet) {
+    margin: 50px auto 38px;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 70px auto 53px;
+  }
 }
 
 .load__link {
@@ -21,11 +50,23 @@
 }
 
 .load__text {
-  color: @color-text-second;
+  max-width: 230px;
+  margin: 0 auto;
   text-align: center;
+  color: @color-text-second;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.71;
-  max-width: 230px;
-  margin: 0 auto;
+
+  @media (min-width: @tablet) {
+    max-width: none;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  @media (min-width: @desktop) {
+    font-size: 18px;
+    line-height: 1.33;
+  }
 }

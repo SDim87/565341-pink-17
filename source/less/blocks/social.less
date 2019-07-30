@@ -5,11 +5,21 @@
 
   &_indent {
     margin: 40px 0;
+
+    @media (min-width: @tablet) {
+      margin: 0;
+      margin-left: -20px;
+    }
+
+    @media (min-width: @desktop) {
+      margin-left: 6px;
+    }
   }
 }
 
 .social__item {
   display: flex;
+  box-sizing: border-box;
   width: 50px;
   height: 50px;
   transition: @transition;
@@ -33,15 +43,4 @@
 
 .social__item .icon {
   margin: auto;
-}
-
-
-@media (min-width: @tablet-width) {
-  .social {
-    min-width: 320px;
-
-    &_indent {
-      margin-bottom: 0;
-    }
-  }
 }

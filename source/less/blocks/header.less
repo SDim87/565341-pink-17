@@ -1,13 +1,19 @@
 .header {
-  background-color: @color-sixth;
   position: relative;
   z-index: 50;
+  background-color: @color-sixth;
+
+  @media (min-width: @desktop) {
+    position: absolute;
+    right: 0;
+    left: 0;
+  }
 }
 
 .header__wrapper {
   position: relative;
-  padding: 0 20px;
   z-index: 100;
+  padding: 0 20px;
   animation: colorClose 0.2s ease-in-out forwards;
 
   @keyframes colorClose {
@@ -23,12 +29,16 @@
       background-color: transparent;
     }
   }
+
+  @media (min-width: @desktop) {
+    padding: 0;
+  }
 }
 
 .header.is-opened .header__wrapper,
 .header.is-no-js .header__wrapper {
-  background-color: @color-main;
   animation: colorOpen 0.2s 0.2s ease-in-out forwards;
+  background-color: @color-main;
 
   @keyframes colorOpen {
     100% {
@@ -38,17 +48,26 @@
 }
 
 .header__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 66px;
   position: relative;
   z-index: 100;
+  display: flex;
+  height: 66px;
+
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet) {
+    height: 110px;
+  }
 }
 
 .header__btn {
-  display: flex;
   position: relative;
+  display: flex;
+
+  @media (min-width: @desktop) {
+    display: none;
+  }
 }
 
 .header__btn:hover .icon,

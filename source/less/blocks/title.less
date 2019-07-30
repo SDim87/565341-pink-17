@@ -1,15 +1,28 @@
 .title {
   &_one {
+    color: @color-text-second;
     font-size: 24px;
     font-weight: 300;
-    line-height: 1.5;
-    color: @color-text-second;
+    line-height: 1.25;
+
+    @media (min-width: @tablet) {
+      font-size: 50px;
+    }
   }
 
-  &_wrap_center {
-    display: block;
-    margin: auto;
-    text-align: center;
+  &_two {
+    color: @color-text-second;
+    font-weight: 300;
+    line-height: 1.5;
+
+    @media (min-width: @tablet) {
+      font-size: 40px;
+      line-height: 1.25;
+    }
+
+    @media (min-width: @desktop) {
+      font-size: 50px;
+    }
   }
 
   &_size-m {
@@ -18,5 +31,37 @@
 
   &_size-l {
     max-width: 230px;
+  }
+
+  &_wrap_center {
+    display: block;
+    margin: 32px auto 0;
+    text-align: center;
+  }
+
+  &_centered {
+    text-align: center;
+  }
+
+  &_indent_l {
+    margin-bottom: 24px;
+
+    @media (min-width: @desktop) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &_none_mob {
+    display: none;
+
+    @media (min-width: @tablet) {
+      display: block;
+    }
+  }
+
+  &_width_l {
+    @media (min-width: @desktop) {
+      max-width: 900px;
+    }
   }
 }
