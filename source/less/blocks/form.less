@@ -1,16 +1,26 @@
 .form {
   margin-bottom: 24px;
+  padding-top: 40px;
 
   @media (min-width: @tablet) {
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
-    padding-top: 50px;
+    padding-top: 90px;
+  }
+
+  @media (min-width: @desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
 .form__section {
   padding: 40px 0 42px;
+
+  @media (min-width: @desktop) {
+    padding: 53px 0 42px;
+  }
 
   &_checkbox,
   &_radio {
@@ -23,10 +33,21 @@
 
   &_name {
     order: 1;
+
+    @media (min-width: @desktop) {
+      width: 477px;
+      margin-left: auto;
+      margin-right: 28px;
+    }
   }
 
   &_checkbox {
     order: 3;
+
+    @media (min-width: @desktop) {
+      width: 100%;
+      padding: 53px 0 50px;
+    }
   }
 
   &_contacts {
@@ -37,6 +58,11 @@
     @media (min-width: @tablet) {
       padding: 25px 0;
     }
+
+    @media (min-width: @desktop) {
+      width: 100%;
+      padding: 25px 0 12px;
+    }
   }
 
   &_radio {
@@ -44,6 +70,12 @@
 
     @media (min-width: @tablet) {
       padding: 23px 0 42px;
+    }
+
+    @media (min-width: @desktop) {
+      width: 477px;
+      margin-right: auto;
+      padding: 48px 0 42px;
     }
   }
 
@@ -53,47 +85,91 @@
     @media (min-width: @tablet) {
       padding: 15px 0 68px;
     }
+
+    @media (min-width: @desktop) {
+      width: 100%;
+    }
   }
 
   &_btn {
     padding: 0;
 
     order: 3;
+
+    @media (min-width: @desktop) {
+      width: 100%;
+    }
   }
 }
 
 .form__inner {
+  position: relative;
+
   @media (min-width: @tablet) {
-    padding: 0 60px 56px;
+    padding: 52px 60px 56px;
     border: 2px solid @color-silver-second;
     border-radius: 3px;
   }
 
+  @media (min-width: @desktop) {
+    padding: 55px 75px 56px;
+  }
+
   &_indent {
     @media (min-width: @tablet) {
-      padding: 0 60px 26px;
+      padding: 45px 60px 26px;
+    }
+
+    @media (min-width: @desktop) {
+      padding: 42px 60px 12px;
     }
   }
 
   &_indent_l {
     @media (min-width: @tablet) {
-      padding: 0 60px 38px;
+      padding: 46px 60px 38px;
+    }
+
+    @media (min-width: @desktop) {
+      padding: 40px 60px 38px;
+    }
+  }
+
+  &_contacts {
+    @media (min-width: @desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &_checkbox {
+    @media (min-width: @desktop) {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 52px 60px 55px;
+      justify-content: space-between;
     }
   }
 }
 
+.form__text-box {
+  width: 100%;
+}
+
 .form__text {
-  margin: 8px 0 35px;
+  margin: 8px 0 -6px;
   text-align: center;
   color: @color-main;
   font-size: 14px;
   line-height: 30px;
+  padding: 0 20px;
 
   @media (min-width: @tablet) {
     max-width: 505px;
-    margin: 0 auto 71px;
+    margin: 0 auto 32px;
     font-size: 18px;
     line-height: 1.67;
+    padding: 0;
   }
 
   @media (min-width: @desktop) {
@@ -111,7 +187,9 @@
 
 .form__box {
   @media (min-width: @tablet) {
-    position: relative;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     top: -14px;
     text-align: center;
   }
@@ -139,6 +217,11 @@
     padding: 0 32px;
     background-color: @color-second;
     font-weight: 400;
+    white-space: nowrap;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0 25px;
   }
 
   &_indent {
@@ -150,6 +233,16 @@
 
     @media (min-width: @tablet) {
       margin-bottom: 23px;
+    }
+  }
+}
+
+.form__row {
+  &:not(:last-child) {
+    margin-bottom: 43px;
+
+    @media (min-width: @desktop) {
+      margin-bottom: 0;
     }
   }
 }
@@ -184,11 +277,20 @@
       display: flex;
       flex-direction: column;
     }
+
+    @media (min-width: @desktop) {
+      width: 372px;
+
+    }
   }
 
   &_contacts:not(:last-child) {
     @media (min-width: @tablet) {
       margin-bottom: 28px;
+    }
+
+    @media (min-width: @desktop) {
+      margin-bottom: 0;
     }
   }
 }
@@ -336,6 +438,10 @@
     padding-top: 15px;
     resize: none;
     line-height: 30px;
+
+    @media (min-width: @desktop) {
+      min-height: 127px;
+    }
   }
 
   &_textarea::placeholder {
@@ -369,6 +475,8 @@
   }
 }
 
+
+
 .form__required {
   display: block;
   margin-top: 35px;
@@ -385,3 +493,12 @@
 .form__mark {
   color: @color-fourth;
 }
+
+.form__required-add {
+  display: none;
+
+  @media (min-width: @desktop) {
+    display: inline;
+  }
+}
+
