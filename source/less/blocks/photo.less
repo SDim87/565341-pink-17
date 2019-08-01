@@ -1,6 +1,17 @@
 .photo__picture {
   position: relative;
+
   display: block;
+
+  &_size_l {
+    @media (min-width: @tablet) {
+      height: 509px;
+    }
+
+    @media (min-width: @desktop) {
+      height: 506px;
+    }
+  }
 }
 
 .photo__mark {
@@ -8,61 +19,184 @@
   z-index: 10;
   top: 0;
   right: 20px;
+
   width: 140px;
   height: 35px;
+
   text-align: center;
   text-transform: uppercase;
+
   color: @color-second;
   background-color: @color-fourth;
+
   font-size: 12px;
   line-height: 35px;
+
+  @media (min-width: @tablet) {
+    top: 56px;
+
+    font-weight: 700;
+  }
+
+  @media (min-width: @desktop) {
+    top: 54px;
+    right: 130px;
+  }
+}
+
+.photo__grid {
+  @media (min-width: @tablet) {
+    display: flex;
+
+    margin-left: -20px;
+
+    flex-wrap: wrap;
+  }
+}
+
+.photo__card {
+  @media (min-width: @tablet) {
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+  }
+
+  @media (min-width: @desktop) {
+    width: 33.3333333%;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @media (min-width: @tablet) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.photo__inner {
+  @media (min-width: @tablet) {
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0 0 20px 20px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0 0 54px 20px;
+  }
 }
 
 .photo__info {
-  margin-bottom: 20px;
-  padding-top: 20px;
-  padding-right: 18px;
-  padding-bottom: 25px;
-  padding-left: 18px;
+  padding: 20px 18px;
+
   background-color: @color-silver-second;
+
   font-size: 14px;
   line-height: 24px;
 
+  @media (min-width: @tablet) {
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    min-height: 155px;
+    padding: 24px 28px;
+
+    flex-grow: 1;
+  }
+
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &_top {
+    margin-bottom: 20px;
+
+    @media (min-width: @tablet) {
+      position: relative;
+
+      min-height: auto;
+      margin-bottom: 50px;
+      padding: 23px 28px 17px;
+    }
   }
 }
 
 .photo__name {
   margin: 0;
+
   font-weight: 700;
 }
 
 .photo__time {
   text-transform: uppercase;
+
   font-size: 12px;
   font-weight: 300;
 }
 
 .photo__comment {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 7px;
+
+  @media (min-width: @tablet) {
+    flex-grow: 1;
+  }
 }
 
 .photo__handler {
   display: flex;
+
   margin: 0;
+
   text-transform: uppercase;
+
   color: @color-fourth;
+
   font-size: 12px;
+
+  &_top {
+    @media (min-width: @tablet) {
+      position: absolute;
+      top: 24px;
+      right: 26px;
+    }
+  }
 }
 
 .photo__like {
   display: flex;
 
   align-items: center;
+
+  @media (min-width: @tablet) {
+    width: 100%;
+
+    justify-content: space-between;
+  }
 }
 
-.photo__like .icon {
+.photo__handler .icon {
   margin-right: 20px;
+
+  @media (min-width: @tablet) {
+    margin-right: 0;
+
+    order: 1;
+  }
+}
+
+.photo__handler_top .icon {
+  @media (min-width: @tablet) {
+    margin-left: 20px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-left: 18px;
+    margin-right: 5px;
+  }
 }

@@ -1,55 +1,207 @@
 .filter {
+  margin-bottom: 12px;
   padding-top: 20px;
+
   background-color: @color-silver-second;
+
+  @media (min-width: @tablet) {
+    padding: 57px 0 53px;
+    margin-bottom: 5px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0;
+    background-color: transparent;
+    margin-bottom: 30px;
+  }
 }
 
-.filter__group {
+.filter__wrap {
+  @media (min-width: @tablet) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 57px 60px 57px 80px;
+    background-color: @color-silver-second;
+  }
+}
+
+.filter__inner {
+  @media (min-width: @tablet) {
+    width: 100%;
+    margin-top: -14px;
+    margin-left: 48px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-left: 90px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.filter__img {
+  @media (min-width: @tablet) {
+    overflow: hidden;
+    flex: 1 0 auto;
+
+    width: 300px;
+    height: 400px;
+  }
+}
+
+.filter__img .image {
+  @media (min-width: @tablet) {
+    object-fit: cover;
+  }
+}
+
+.filter__list {
   display: flex;
+
   margin-top: 42px;
 
+  list-style-type: none;
+
   justify-content: center;
+
+  @media (min-width: @tablet) {
+    display: block;
+
+    margin-top: 0;
+  }
 }
 
 .filter__item {
   display: flex;
 
-  align-items: center;
+  @media (min-width: @tablet) {
+    padding: 18px 0;
+
+    border-bottom: 1px solid @color-black-first;
+
+    align-items: center;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 13px 0;
+  }
 
   &:not(:last-child) {
     margin-right: 35px;
+
+    @media (min-width: @tablet) {
+      margin-right: 0;
+    }
   }
 }
 
-.filter__item.is-active {
+.filter__btn {
+  display: flex;
+
+  align-items: center;
+
+  @media (min-width: @tablet) {
+    pointer-events: none;
+  }
+}
+
+.filter__btn.is-active {
   pointer-events: none;
 }
 
-.filter__item .icon {
-  opacity: 0.3;
+.filter__btn .icon {
+  opacity: .3;
+
+  @media (min-width: @tablet) {
+    opacity: 1;
+
+    fill: @color-fourth;
+  }
 }
 
-.filter__item.is-active .icon {
+.filter__btn.is-active .icon {
   opacity: 1;
 
   fill: @color-fourth;
 }
 
-.filter__item:hover .icon {
-  opacity: 0.5;
+.filter__btn:hover .icon {
+  opacity: .5;
+
+  @media (min-width: @tablet) {
+    pointer-events: none;
+  }
 }
 
 .filter__range {
   display: flex;
-  max-width: 360px;
+
   min-height: 15px;
-  margin: 32px auto 28px;
+
+  &_mobile {
+    max-width: 360px;
+    margin: 32px auto 28px;
+    padding: 0 18px;
+
+    @media (min-width: @tablet) {
+      display: none;
+    }
+  }
+
+  &_tablet {
+    display: none;
+
+    width: 100%;
+    min-height: 34px;
+    margin-left: 30px;
+    padding-right: 18px;
+
+    @media (min-width: @tablet) {
+      display: block;
+    }
+  }
+}
+
+.filter__bottom {
+  @media (min-width: @desktop) {
+    margin-top: auto;
+  }
 }
 
 .filter__buttons {
-  padding: 40px 20px;
+  padding: 37px 0;
+
   border-top: 1px solid @color-black-first;
+
+  @media (min-width: @tablet) {
+    padding: 0;
+    border: none;
+    margin: 66px 13px 0 0;
+  }
+
+  @media (min-width: @desktop) {
+    display: flex;
+    margin: 0;
+  }
 }
 
-.filter__buttons .button:not(:last-child) {
-  margin-bottom: 12px;
+.filter__buttons .button {
+  @media (min-width: @desktop) {
+    width: 100%;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+
+    @media (min-width: @tablet) {
+      margin-bottom: 23px;
+    }
+
+    @media (min-width: @desktop) {
+      margin-bottom: 0;
+      margin-right: 40px;
+    }
+  }
 }

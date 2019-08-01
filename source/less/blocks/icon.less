@@ -115,6 +115,11 @@
   &_size_xl {
     width: 44px;
     height: 44px;
+
+    @media (min-width: @tablet) and (max-width: @desktop - 1) {
+      width: 22px;
+      height: 22px;
+    }
   }
 
   &_first {
