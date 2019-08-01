@@ -1,18 +1,17 @@
 .filter {
   margin-bottom: 12px;
   padding-top: 20px;
-
   background-color: @color-silver-second;
 
   @media (min-width: @tablet) {
-    padding: 57px 0 53px;
     margin-bottom: 5px;
+    padding: 57px 0 53px;
   }
 
   @media (min-width: @desktop) {
+    margin-bottom: 30px;
     padding: 0;
     background-color: transparent;
-    margin-bottom: 30px;
   }
 }
 
@@ -35,9 +34,9 @@
   }
 
   @media (min-width: @desktop) {
-    margin-left: 90px;
     display: flex;
     flex-direction: column;
+    margin-left: 90px;
   }
 }
 
@@ -45,7 +44,6 @@
   @media (min-width: @tablet) {
     overflow: hidden;
     flex: 1 0 auto;
-
     width: 300px;
     height: 400px;
   }
@@ -59,16 +57,13 @@
 
 .filter__list {
   display: flex;
-
   margin-top: 42px;
-
   list-style-type: none;
 
   justify-content: center;
 
   @media (min-width: @tablet) {
     display: block;
-
     margin-top: 0;
   }
 }
@@ -78,7 +73,6 @@
 
   @media (min-width: @tablet) {
     padding: 18px 0;
-
     border-bottom: 1px solid @color-black-first;
 
     align-items: center;
@@ -112,7 +106,7 @@
 }
 
 .filter__btn .icon {
-  opacity: .3;
+  opacity: 0.3;
 
   @media (min-width: @tablet) {
     opacity: 1;
@@ -128,7 +122,7 @@
 }
 
 .filter__btn:hover .icon {
-  opacity: .5;
+  opacity: 0.5;
 
   @media (min-width: @tablet) {
     pointer-events: none;
@@ -137,7 +131,6 @@
 
 .filter__range {
   display: flex;
-
   min-height: 15px;
 
   &_mobile {
@@ -152,7 +145,6 @@
 
   &_tablet {
     display: none;
-
     width: 100%;
     min-height: 34px;
     margin-left: 30px;
@@ -172,13 +164,12 @@
 
 .filter__buttons {
   padding: 37px 0;
-
   border-top: 1px solid @color-black-first;
 
   @media (min-width: @tablet) {
+    margin: 66px 13px 0 0;
     padding: 0;
     border: none;
-    margin: 66px 13px 0 0;
   }
 
   @media (min-width: @desktop) {
@@ -200,8 +191,8 @@
     }
 
     @media (min-width: @desktop) {
-      margin-bottom: 0;
       margin-right: 40px;
+      margin-bottom: 0;
     }
   }
 }

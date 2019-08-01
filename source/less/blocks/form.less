@@ -11,6 +11,7 @@
 
   @media (min-width: @desktop) {
     flex-direction: row;
+
     flex-wrap: wrap;
   }
 }
@@ -36,8 +37,8 @@
 
     @media (min-width: @desktop) {
       width: 477px;
-      margin-left: auto;
       margin-right: 28px;
+      margin-left: auto;
     }
   }
 
@@ -138,6 +139,7 @@
   &_contacts {
     @media (min-width: @desktop) {
       display: flex;
+
       justify-content: space-between;
     }
   }
@@ -145,8 +147,9 @@
   &_checkbox {
     @media (min-width: @desktop) {
       display: flex;
-      flex-wrap: wrap;
       padding: 52px 60px 55px;
+
+      flex-wrap: wrap;
       justify-content: space-between;
     }
   }
@@ -158,18 +161,18 @@
 
 .form__text {
   margin: 8px 0 -6px;
+  padding: 0 20px;
   text-align: center;
   color: @color-main;
   font-size: 14px;
   line-height: 30px;
-  padding: 0 20px;
 
   @media (min-width: @tablet) {
     max-width: 505px;
     margin: 0 auto 32px;
+    padding: 0;
     font-size: 18px;
     line-height: 1.67;
-    padding: 0;
   }
 
   @media (min-width: @desktop) {
@@ -188,9 +191,9 @@
 .form__box {
   @media (min-width: @tablet) {
     position: absolute;
+    top: -14px;
     left: 50%;
     transform: translateX(-50%);
-    top: -14px;
     text-align: center;
   }
 
@@ -215,9 +218,9 @@
     display: inline-block;
     margin: 0 0 30px;
     padding: 0 32px;
+    white-space: nowrap;
     background-color: @color-second;
     font-weight: 400;
-    white-space: nowrap;
   }
 
   @media (min-width: @desktop) {
@@ -280,7 +283,6 @@
 
     @media (min-width: @desktop) {
       width: 372px;
-
     }
   }
 
@@ -501,4 +503,3 @@
     display: inline;
   }
 }
-
