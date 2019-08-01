@@ -1,7 +1,32 @@
 .main__title {
-  margin: 54px 0;
+  margin: 50px 0;
   padding: 0 20px;
   text-align: center;
   font-size: 14px;
   line-height: 2.14;
+
+  @media (min-width: @tablet) {
+    max-width: 460px;
+    margin: 92px auto 76px;
+    font-size: 18px;
+    line-height: 1.67;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: 590px;
+    margin: 92px auto 88px;
+  }
+
+  &_indent {
+    margin: 44px 0;
+
+    @media (min-width: @tablet) {
+      margin: 44px auto 70px;
+    }
+
+    @media (min-width: @desktop) {
+      max-width: 440px;
+      margin: 5px auto 65px;
+    }
+  }
 }

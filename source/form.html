@@ -57,15 +57,18 @@
     <section class="banner">
       <div class="banner__top banner__top_inner">
         <div class="banner__title">
-          <h1 class="title title_one title_wrap_center title_width_l">Конкурс на самое безбашенное путешествие с Пинк</h1>
+          <h1 class="title title_one title_wrap_center title_width_l">Конкурс на самое безбашенное путешествие с Пинк
+          </h1>
         </div>
       </div>
     </section>
     <form class="form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="form__text-box">
+        <p class="form__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу
+          бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></p>
+      </div>
       <section class="form__section form__section_name">
         <div class="container">
-          <p class="form__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу
-            бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></p>
           <div class="form__group form__group_text">
             <label class="form__label" for="surname">Фамилия:</label>
             <input class="form__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию *" required>
@@ -83,40 +86,46 @@
       </section>
       <section class="form__section form__section_checkbox">
         <div class="container">
-          <div class="form__inner">
+          <div class="form__inner form__inner_checkbox">
             <div class="form__box">
               <h4 class="form__title">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</h4>
             </div>
-            <div class="form__group form__group_check">
-              <input class="form__check visually-hidden" type="checkbox" name="selfie-shark" id="selfie-shark">
-              <label class="form__label form__label_check" for="selfie-shark">Сделал селфи с акулой</label>
+            <div class="form__row">
+              <div class="form__group form__group_check">
+                <input class="form__check visually-hidden" type="checkbox" name="selfie-shark" id="selfie-shark">
+                <label class="form__label form__label_check" for="selfie-shark">Сделал селфи с акулой</label>
+              </div>
+              <div class="form__group form__group_check">
+                <input class="form__check visually-hidden" type="checkbox" name="tanned-beach" id="tanned-beach">
+                <label class="form__label form__label_check" for="tanned-beach">Обгорел на пляже</label>
+              </div>
             </div>
-            <div class="form__group form__group_check">
-              <input class="form__check visually-hidden" type="checkbox" name="tanned-beach" id="tanned-beach">
-              <label class="form__label form__label_check" for="tanned-beach">Обгорел на пляже</label>
+            <div class="form__row">
+              <div class="form__group form__group_check">
+                <input class="form__check visually-hidden" type="checkbox" name="chuck-norris" id="chuck-norris">
+                <label class="form__label form__label_check" for="chuck-norris">Видел Чака Норриса</label>
+              </div>
+              <div class="form__group form__group_check">
+                <input class="form__check visually-hidden" type="checkbox" name="buy-souvenirs" id="buy-souvenirs">
+                <label class="form__label form__label_check" for="buy-souvenirs">Накупил сувениров</label>
+              </div>
             </div>
-            <div class="form__group form__group_check">
-              <input class="form__check visually-hidden" type="checkbox" name="chuck-norris" id="chuck-norris">
-              <label class="form__label form__label_check" for="chuck-norris">Видел Чака Норриса</label>
-            </div>
-            <div class="form__group form__group_check">
-              <input class="form__check visually-hidden" type="checkbox" name="buy-souvenirs" id="buy-souvenirs">
-              <label class="form__label form__label_check" for="buy-souvenirs">Накупил сувениров</label>
-            </div>
-            <div class="form__group form__group_check">
-              <input class="form__check visually-hidden" type="checkbox" name="held-tower" id="held-tower">
-              <label class="form__label form__label_check" for="held-tower">Удержал башню</label>
-            </div>
-            <div class="form__group form__group_check">
-              <input class="form__check visually-hidden" type="checkbox" name="broken-hotel" id="broken-hotel">
-              <label class="form__label form__label_check" for="broken-hotel">Разгромил отель</label>
+            <div class="form__row">
+              <div class="form__group form__group_check">
+                <input class="form__check visually-hidden" type="checkbox" name="held-tower" id="held-tower">
+                <label class="form__label form__label_check" for="held-tower">Удержал башню</label>
+              </div>
+              <div class="form__group form__group_check">
+                <input class="form__check visually-hidden" type="checkbox" name="broken-hotel" id="broken-hotel">
+                <label class="form__label form__label_check" for="broken-hotel">Разгромил отель</label>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section class="form__section form__section_contacts">
         <div class="container">
-          <div class="form__inner form__inner_indent">
+          <div class="form__inner form__inner_indent form__inner_contacts">
             <div class="form__box form__box_none-mobile">
               <h4 class="form__title form__title_indent">Контактная информация</h4>
             </div>
@@ -159,7 +168,7 @@
       <section class="form__section form__section_descr">
         <div class="container">
           <div class="form__inner form__inner_indent_l">
-            <div class="form__box form__box_none-mobile">
+            <div class="form__box">
               <h4 class="form__title form__title_indent_s">Опишите свои эмоции</h4>
             </div>
             <textarea class="form__input form__input_textarea" name="comment"
@@ -171,13 +180,14 @@
         <div class="container">
           <div class="form__btn">
             <button class="button button_second button_size_xl" type="submit">Отправить форму</button>
-            <p class="form__required"><span class="form__mark">*</span> &mdash; обязательные поля</p>
+            <p class="form__required"><span class="form__mark">*</span> &mdash; обязательные<span
+                class="form__required-add"> для заполнения</span> поля</p>
           </div>
         </div>
       </section>
     </form>
   </main>
-  <footer class="footer">
+  <footer class="footer footer_inner">
     <div class="container">
       <div class="footer__wrapper">
         <a class="logo logo_footer" href="index.html">
