@@ -38,13 +38,13 @@
       <nav class="nav js-nav is-no-js">
         <ul class="nav__list">
           <li class="nav__item">
-            <a class="nav__link is-active">Главная</a>
+            <a class="nav__link" href="index.html">Главная</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="photo.html">Фотографии</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="form.html">Конкурс</a>
+            <a class="nav__link is-active">Конкурс</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
@@ -71,16 +71,18 @@
         <div class="container">
           <div class="form__group form__group_text">
             <label class="form__label" for="surname">Фамилия:</label>
-            <input class="form__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию *" required>
+            <input class="form__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию *"
+              autocomplete="off" required>
           </div>
           <div class="form__group form__group_text">
             <label class="form__label" for="first-name">Имя:</label>
             <input class="form__input" type="text" name="first-name" id="first-name" placeholder="Введите ваше имя *"
-              required>
+              autocomplete="off" required>
           </div>
           <div class="form__group form__group_text">
             <label class="form__label" for="patronymic">Отчество:</label>
-            <input class="form__input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
+            <input class="form__input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже"
+              autocomplete="off">
           </div>
         </div>
       </section>
@@ -132,13 +134,15 @@
             <div class="form__group form__group_contacts">
               <label class="form__label form__label_contacts" for="phone">Номер телефона</label>
               <div class="form__inside form__inside_tel">
-                <input class="form__input" type="tel" name="phone" id="phone" placeholder="Номер, пожалуйста">
+                <input class="form__input" type="tel" name="phone" id="phone" placeholder="Номер, пожалуйста"
+                  minlength="11" maxlength="11" pattern="\d{11}" autocomplete="on">
               </div>
             </div>
             <div class="form__group form__group_contacts">
               <label class="form__label form__label_contacts" for="mail">Адрес почты</label>
               <div class="form__inside form__inside_mail">
-                <input class="form__input" type="email" name="mail" id="mail" placeholder="Введите почту *" required>
+                <input class="form__input" type="email" name="mail" id="mail" placeholder="Введите почту *"
+                  autocomplete="on" required>
               </div>
             </div>
           </div>
