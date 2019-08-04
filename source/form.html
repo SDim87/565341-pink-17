@@ -10,26 +10,27 @@
 </head>
 
 <body class="body">
+  <h1 class="visually-hidden">Страница отправки формы</h1>
   <header class="header js-header is-no-js">
     <div class="container container_header">
       <div class="header__wrapper">
         <div class="header__top">
-          <a class="logo logo_header" href="index.html">
-            <svg class="icon icon_second icon_logo-mobile">
+          <a class="logo logo_header" href="index.html" aria-label="Логотип Пинк">
+            <svg class="icon icon_second icon_logo-mobile" focusable="false">
               <use xlink:href="img/sprite.svg#logo-pink-white-mobile"></use>
             </svg>
-            <svg class="icon icon_second icon_logo-tablet">
+            <svg class="icon icon_second icon_logo-tablet" focusable="false">
               <use xlink:href="img/sprite.svg#logo-pink-white-tablet"></use>
             </svg>
-            <svg class="icon icon_second icon_logo-desktop">
+            <svg class="icon icon_second icon_logo-desktop" focusable="false">
               <use xlink:href="img/sprite.svg#logo-pink-white-desktop"></use>
             </svg>
           </a>
-          <button class="header__btn js-header__btn">
-            <svg class="icon icon_second icon_burger js-icon_toggle is-opened">
+          <button class="header__btn js-header__btn" aria-label="Кнопка мобильного меню">
+            <svg class="icon icon_second icon_burger js-icon_toggle is-opened" focusable="false">
               <use xlink:href="img/sprite.svg#icon-menu-burger"></use>
             </svg>
-            <svg class="icon icon_second icon_close js-icon_toggle">
+            <svg class="icon icon_second icon_close js-icon_toggle" focusable="false">
               <use xlink:href="img/sprite.svg#icon-menu-cross"></use>
             </svg>
           </button>
@@ -38,13 +39,13 @@
       <nav class="nav js-nav is-no-js">
         <ul class="nav__list">
           <li class="nav__item">
-            <a class="nav__link is-active">Главная</a>
+            <a class="nav__link" href="index.html">Главная</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="photo.html">Фотографии</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="form.html">Конкурс</a>
+            <a class="nav__link is-active">Конкурс</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
@@ -57,8 +58,8 @@
     <section class="banner">
       <div class="banner__top banner__top_inner">
         <div class="banner__title">
-          <h1 class="title title_one title_wrap_center title_width_l">Конкурс на самое безбашенное путешествие с Пинк
-          </h1>
+          <h2 class="title title_one title_wrap_center title_width_l">Конкурс на самое безбашенное путешествие с Пинк
+          </h2>
         </div>
       </div>
     </section>
@@ -68,19 +69,22 @@
           бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></p>
       </div>
       <section class="form__section form__section_name">
+        <h3 class="visually-hidden">Личные данные</h3>
         <div class="container">
           <div class="form__group form__group_text">
             <label class="form__label" for="surname">Фамилия:</label>
-            <input class="form__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию *" required>
+            <input class="form__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию *"
+              autocomplete="off" required>
           </div>
           <div class="form__group form__group_text">
             <label class="form__label" for="first-name">Имя:</label>
             <input class="form__input" type="text" name="first-name" id="first-name" placeholder="Введите ваше имя *"
-              required>
+              autocomplete="off" required>
           </div>
           <div class="form__group form__group_text">
             <label class="form__label" for="patronymic">Отчество:</label>
-            <input class="form__input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
+            <input class="form__input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже"
+              autocomplete="off">
           </div>
         </div>
       </section>
@@ -88,7 +92,7 @@
         <div class="container">
           <div class="form__inner form__inner_checkbox">
             <div class="form__box">
-              <h4 class="form__title">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</h4>
+              <h3 class="form__title">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</h3>
             </div>
             <div class="form__row">
               <div class="form__group form__group_check">
@@ -127,18 +131,20 @@
         <div class="container">
           <div class="form__inner form__inner_indent form__inner_contacts">
             <div class="form__box form__box_none-mobile">
-              <h4 class="form__title form__title_indent">Контактная информация</h4>
+              <h3 class="form__title form__title_indent">Контактная информация</h3>
             </div>
             <div class="form__group form__group_contacts">
               <label class="form__label form__label_contacts" for="phone">Номер телефона</label>
               <div class="form__inside form__inside_tel">
-                <input class="form__input" type="tel" name="phone" id="phone" placeholder="Номер, пожалуйста">
+                <input class="form__input" type="tel" name="phone" id="phone" placeholder="Номер, пожалуйста"
+                  minlength="11" maxlength="11" pattern="\d{11}" autocomplete="on">
               </div>
             </div>
             <div class="form__group form__group_contacts">
               <label class="form__label form__label_contacts" for="mail">Адрес почты</label>
               <div class="form__inside form__inside_mail">
-                <input class="form__input" type="email" name="mail" id="mail" placeholder="Введите почту *" required>
+                <input class="form__input" type="email" name="mail" id="mail" placeholder="Введите почту *"
+                  autocomplete="on" required>
               </div>
             </div>
           </div>
@@ -148,7 +154,7 @@
         <div class="container">
           <div class="form__inner">
             <div class="form__box">
-              <h4 class="form__title">С каким приложением путешествовали?</h4>
+              <h3 class="form__title">С каким приложением путешествовали?</h3>
             </div>
             <div class="form__group form__group_radio">
               <input class="form__check visually-hidden" type="radio" name="radio-platform" id="ios" checked>
@@ -169,14 +175,16 @@
         <div class="container">
           <div class="form__inner form__inner_indent_l">
             <div class="form__box">
-              <h4 class="form__title form__title_indent_s">Опишите свои эмоции</h4>
+              <h3 class="form__title form__title_indent_s">Опишите свои эмоции</h3>
             </div>
             <textarea class="form__input form__input_textarea" name="comment"
-              placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            placeholder="Можно прям в красках, не стесняясь в выражениях" autocomplete="off" id="textarea"></textarea>
+            <label class="visually-hidden" for="textarea">Текстовое поле коментария</label>
           </div>
         </div>
       </section>
       <section class="form__section form__section_btn">
+        <h3 class="visually-hidden">Отправка формы</h3>
         <div class="container">
           <div class="form__btn">
             <button class="button button_second button_size_xl" type="submit">Отправить форму</button>
@@ -187,38 +195,38 @@
       </section>
     </form>
   </main>
-  <footer class="footer footer_inner">
+  <footer class="footer">
     <div class="container">
       <div class="footer__wrapper">
-        <a class="logo logo_footer" href="index.html">
-          <svg class="icon icon_logo-tablet icon_logo-tablet_footer icon_first">
+        <a class="logo logo_footer" href="index.html" aria-label="Логотип Пинк">
+          <svg class="icon icon_logo-tablet icon_logo-tablet_footer icon_first" focusable="false">
             <use xlink:href="img/sprite.svg#logo-pink-blue-mobile"></use>
           </svg>
-          <svg class="icon icon_first icon_logo-desktop">
+          <svg class="icon icon_first icon_logo-desktop" focusable="false">
             <use xlink:href="img/sprite.svg#logo-pink-blue-desktop"></use>
           </svg>
         </a>
         <div class="social social_indent">
           <a class="social__item social__item_tw" href="#">Twitter
-            <svg class="icon icon_social icon_third">
+            <svg class="icon icon_social icon_third" focusable="false">
               <use xlink:href="img/sprite.svg#icon-twitter"></use>
             </svg>
           </a>
           <a class="social__item social__item_fb" href="#">Facebook
-            <svg class="icon icon_social icon_third">
+            <svg class="icon icon_social icon_third" focusable="false">
               <use xlink:href="img/sprite.svg#icon-facebook"></use>
             </svg>
           </a>
           <a class="social__item social__item_yt" href="#">YouTube
-            <svg class="icon icon_social icon_third">
+            <svg class="icon icon_social icon_third" focusable="false">
               <use xlink:href="img/sprite.svg#icon-youtube"></use>
             </svg>
           </a>
         </div>
         <div class="footer__copyright">
           <span>Разработано</span>
-          <a class="logo logo_academy" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg class="icon icon_logo-academy icon_third">
+          <a class="logo logo_academy" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип htmlacademy">
+            <svg class="icon icon_logo-academy icon_third" focusable="false">
               <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
             </svg>
           </a>
@@ -226,6 +234,34 @@
       </div>
     </div>
   </footer>
+  <!-- Убрать класс .popup_hide -->
+  <section class="popup popup_hide">
+    <div class="popup__top">
+      <div class="container container_popup">
+        <h3 class="popup__title">Ваша заявка отправлена</h3>
+        <p class="popup__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим
+          ее и оповестим вас.</p>
+      </div>
+    </div>
+    <div class="popup__bottom">
+      <button class="button button_second button_size_xl button_w100">Закрыть окно</button>
+    </div>
+  </section>
+  <!-- Убрать класс .popup_hide -->
+  <section class="popup popup_hide">
+    <div class="popup__top">
+      <div class="container container_popup">
+
+        <h3 class="popup__title">Что-то пошло не&nbsp;так!</h3>
+        <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+        </p>
+      </div>
+    </div>
+    <div class="popup__bottom">
+      <button class="button button_second button_size_xl">OK</button>
+    </div>
+  </section>
+
   <script src="scripts/scripts.js"></script>
 </body>
 
