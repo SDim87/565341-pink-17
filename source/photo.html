@@ -15,22 +15,22 @@
     <div class="container container_header">
       <div class="header__wrapper">
         <div class="header__top">
-          <a class="logo logo_header" href="index.html">
-            <svg class="icon icon_second icon_logo-mobile">
+          <a class="logo logo_header" href="index.html" aria-label="Логотип Пинк">
+            <svg class="icon icon_second icon_logo-mobile" focusable="false">
               <use xlink:href="img/sprite.svg#logo-pink-white-mobile"></use>
             </svg>
-            <svg class="icon icon_second icon_logo-tablet">
+            <svg class="icon icon_second icon_logo-tablet" focusable="false">
               <use xlink:href="img/sprite.svg#logo-pink-white-tablet"></use>
             </svg>
-            <svg class="icon icon_second icon_logo-desktop">
+            <svg class="icon icon_second icon_logo-desktop" focusable="false">
               <use xlink:href="img/sprite.svg#logo-pink-white-desktop"></use>
             </svg>
           </a>
-          <button class="header__btn js-header__btn">
-            <svg class="icon icon_second icon_burger js-icon_toggle is-opened">
+          <button class="header__btn js-header__btn" aria-label="Кнопка мобильного меню">
+            <svg class="icon icon_second icon_burger js-icon_toggle is-opened" focusable="false">
               <use xlink:href="img/sprite.svg#icon-menu-burger"></use>
             </svg>
-            <svg class="icon icon_second icon_close js-icon_toggle">
+            <svg class="icon icon_second icon_close js-icon_toggle" focusable="false">
               <use xlink:href="img/sprite.svg#icon-menu-cross"></use>
             </svg>
           </button>
@@ -65,11 +65,14 @@
     <p class="main__title">Взгляните на фотографии, которые выкладывают пользователи!
       Видите,&nbsp;как&nbsp;не&nbsp;хватает&nbsp;ваших?</p>
     <section class="photo">
+      <h2 class="visually-hidden">Фотографии</h2>
       <a class="photo__picture photo__picture_size_l" href="#">
         <picture>
-          <source srcset="./img/panorama-desktop@1x.jpg" media="(min-width: 1200px)">
-          <source srcset="./img/panorama-tablet@1x.jpg" media="(min-width: 660px)">
-          <img class="image image_cover" src="./img/panorama-mobile@1x.jpg" alt="photo">
+          <source media="(min-width: 1200px)"
+            srcset="./img/panorama-desktop@1x.jpg 1x, ./img/panorama-desktop@2x.jpg 2x">
+          <source media="(min-width: 660px)" srcset="./img/panorama-tablet@1x.jpg 1x, ./img/panorama-tablet@2x.jpg 2x">
+          <img class="image image_cover" src="./img/panorama-mobile@1x.jpg" srcset="./img/panorama-mobile@2x.jpg 2x"
+            alt="Фото дня">
         </picture>
         <span class="photo__mark">Панорама дня</span>
       </a>
@@ -80,7 +83,7 @@
             перископе, задавайте свои вопросы!</p>
           <p class="photo__handler photo__handler_top">
             <a class="photo__like" href="#">
-              <svg class="icon icon_third icon_size_s">
+              <svg class="icon icon_third icon_size_s" focusable="false">
                 <use xlink:href="img/sprite.svg#icon-heart"></use>
               </svg>Нравится: 215
             </a>
@@ -88,12 +91,16 @@
         </div>
         <div class="photo__grid">
           <article class="photo__card">
+            <h3 class="visually-hidden">Фото №1</h3>
             <div class="photo__inner">
               <a class="photo__picture" href="#">
                 <picture>
-                  <source srcset="img/photo-car-desktop@1x.jpg" media="(min-width: 1200px)">
-                  <source srcset="img/photo-car-tablet@1x.jpg" media="(min-width: 660px)">
-                  <img class="image" src="img/photo-car-mobile@1x.jpg" alt="photo">
+                  <source media="(min-width: 1200px)"
+                    srcset="./img/photo-car-desktop@1x.jpg 1x, ./img/photo-car-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)"
+                    srcset="./img/photo-car-tablet@1x.jpg 1x, ./img/photo-car-tablet@2x.jpg 2x">
+                  <img class="image" src="./img/photo-car-mobile@1x.jpg" srcset="./img/photo-car-mobile@2x.jpg 2x"
+                    alt="photo">
                 </picture>
               </a>
               <div class="photo__info">
@@ -101,7 +108,7 @@
                 <p class="photo__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
                 <p class="photo__handler">
                   <a class="photo__like" href="#">
-                    <svg class="icon icon_third icon_size_s">
+                    <svg class="icon icon_third icon_size_s" focusable="false">
                       <use xlink:href="img/sprite.svg#icon-heart"></use>
                     </svg>Нравится: 356
                   </a>
@@ -110,12 +117,16 @@
             </div>
           </article>
           <article class="photo__card">
+            <h3 class="visually-hidden">Фото №2</h3>
             <div class="photo__inner">
               <a class="photo__picture" href="#">
                 <picture>
-                  <source srcset="./img/photo-drumset-desktop@1x.jpg" media="(min-width: 1200px)">
-                  <source srcset="./img/photo-drumset-tablet@1x.jpg" media="(min-width: 660px)">
-                  <img class="image" src="img/photo-drumset-mobile@1x.jpg" alt="photo">
+                  <source media="(min-width: 1200px)"
+                    srcset="./img/photo-drumset-desktop@1x.jpg 1x, ./img/photo-drumset-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)"
+                    srcset="./img/photo-drumset-tablet@1x.jpg 1x, ./img/photo-drumset-tablet@2x.jpg 2x">
+                  <img class="image" src="./img/photo-drumset-mobile@1x.jpg"
+                    srcset="./img/photo-drumset-mobile@2x.jpg 2x" alt="photo">
                 </picture>
               </a>
               <div class="photo__info">
@@ -123,7 +134,7 @@
                 <p class="photo__comment">Соседи будут рады!</p>
                 <p class="photo__handler">
                   <a class="photo__like" href="#">
-                    <svg class="icon icon_third icon_size_s">
+                    <svg class="icon icon_third icon_size_s" focusable="false">
                       <use xlink:href="img/sprite.svg#icon-heart"></use>
                     </svg>Нравится: 666
                   </a>
@@ -132,12 +143,16 @@
             </div>
           </article>
           <article class="photo__card">
+            <h3 class="visually-hidden">Фото №3</h3>
             <div class="photo__inner">
               <a class="photo__picture" href="#">
                 <picture>
-                  <source srcset="./img/photo-window-desktop@1x.jpg" media="(min-width: 1200px)">
-                  <source srcset="./img/photo-window-tablet@1x.jpg" media="(min-width: 660px)">
-                  <img class="image" src="img/photo-window-mobile@1x.jpg" alt="photo">
+                  <source media="(min-width: 1200px)"
+                    srcset="./img/photo-window-desktop@1x.jpg 1x, ./img/photo-window-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)"
+                    srcset="./img/photo-window-tablet@1x.jpg 1x, ./img/photo-window-tablet@2x.jpg 2x">
+                  <img class="image" src="./img/photo-window-mobile@1x.jpg" srcset="./img/photo-window-mobile@2x.jpg 2x"
+                    alt="photo">
                 </picture>
               </a>
               <div class="photo__info">
@@ -145,21 +160,26 @@
                 <p class="photo__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
                 <p class="photo__handler">
                   <a class="photo__like" href="#">
-                    <svg class="icon icon_third icon_size_s">
+                    <svg class="icon icon_third icon_size_s" focusable="false">
                       <use xlink:href="img/sprite.svg#icon-heart"></use>
                     </svg>Нравится: 215
                   </a>
                 </p>
               </div>
             </div>
+
           </article>
           <article class="photo__card">
+            <h3 class="visually-hidden">Фото №4</h3>
             <div class="photo__inner">
               <a class="photo__picture" href="#">
                 <picture>
-                  <source srcset="./img/photo-fair-desktop@1x.jpg" media="(min-width: 1200px)">
-                  <source srcset="./img/photo-fair-tablet@1x.jpg" media="(min-width: 660px)">
-                  <img class="image" src="img/photo-fair-mobile@1x.jpg" alt="photo">
+                  <source media="(min-width: 1200px)"
+                    srcset="./img/photo-fair-desktop@1x.jpg 1x, ./img/photo-fair-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)"
+                    srcset="./img/photo-fair-tablet@1x.jpg 1x, ./img/photo-fair-tablet@2x.jpg 2x">
+                  <img class="image" src="./img/photo-fair-mobile@1x.jpg" srcset="./img/photo-fair-mobile@2x.jpg 2x"
+                    alt="photo">
                 </picture>
               </a>
               <div class="photo__info">
@@ -167,7 +187,7 @@
                 <p class="photo__comment">Самая кубанская в мире!</p>
                 <p class="photo__handler">
                   <a class="photo__like" href="#">
-                    <svg class="icon icon_third icon_size_s">
+                    <svg class="icon icon_third icon_size_s" focusable="false">
                       <use xlink:href="img/sprite.svg#icon-heart"></use>
                     </svg>Нравится: 4
                   </a>
@@ -176,12 +196,16 @@
             </div>
           </article>
           <article class="photo__card">
+            <h3 class="visually-hidden">Фото №5</h3>
             <div class="photo__inner">
               <a class="photo__picture" href="#">
                 <picture>
-                  <source srcset="./img/photo-pov-desktop@1x.jpg" media="(min-width: 1200px)">
-                  <source srcset="./img/photo-pov-tablet@1x.jpg" media="(min-width: 660px)">
-                  <img class="image" src="img/photo-pov-mobile@1x.jpg" alt="photo">
+                  <source media="(min-width: 1200px)"
+                    srcset="./img/photo-pov-desktop@1x.jpg 1x, ./img/photo-pov-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)"
+                    srcset="./img/photo-pov-tablet@1x.jpg 1x, ./img/photo-pov-tablet@2x.jpg 2x">
+                  <img class="image" src="./img/photo-pov-mobile@1x.jpg" srcset="./img/photo-pov-mobile@2x.jpg 2x"
+                    alt="photo">
                 </picture>
               </a>
               <div class="photo__info">
@@ -189,7 +213,7 @@
                 <p class="photo__comment">Где снег-то?</p>
                 <p class="photo__handler">
                   <a class="photo__like" href="#">
-                    <svg class="icon icon_third icon_size_s">
+                    <svg class="icon icon_third icon_size_s" focusable="false">
                       <use xlink:href="img/sprite.svg#icon-heart"></use>
                     </svg>Нравится: 150
                   </a>
@@ -198,12 +222,16 @@
             </div>
           </article>
           <article class="photo__card">
+            <h3 class="visually-hidden">Фото №6</h3>
             <div class="photo__inner">
               <a class="photo__picture" href="#">
                 <picture>
-                  <source srcset="./img/photo-wing-desktop@1x.jpg" media="(min-width: 1200px)">
-                  <source srcset="./img/photo-wing-tablet@1x.jpg" media="(min-width: 660px)">
-                  <img class="image" src="img/photo-wing-mobile@1x.jpg" alt="photo">
+                  <source media="(min-width: 1200px)"
+                    srcset="./img/photo-wing-desktop@1x.jpg 1x, ./img/photo-wing-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)"
+                    srcset="./img/photo-wing-tablet@1x.jpg 1x, ./img/photo-wing-tablet@2x.jpg 2x">
+                  <img class="image" src="./img/photo-wing-mobile@1x.jpg" srcset="./img/photo-wing-mobile@2x.jpg 2x"
+                    alt="photo">
                 </picture>
               </a>
               <div class="photo__info">
@@ -211,7 +239,7 @@
                 <p class="photo__comment">Всем GM и взаимные лайки!</p>
                 <p class="photo__handler">
                   <a class="photo__like" href="#">
-                    <svg class="icon icon_third icon_size_s">
+                    <svg class="icon icon_third icon_size_s" focusable="false">
                       <use xlink:href="img/sprite.svg#icon-heart"></use>
                     </svg>Нравится: 2560
                   </a>
@@ -225,52 +253,59 @@
     <p class="main__title main__title_indent">Затмите их всех! Выкладывайте&nbsp;все,&nbsp;что&nbsp;накопилось в
       телефоне!</p>
     <section class="filter">
+      <h2 class="visually-hidden">Редактирование фото</h2>
       <div class="container">
         <div class="filter__wrap">
           <div class="filter__img">
             <picture>
-              <source srcset="./img/photo-road-desktop@1x.jpg" media="(min-width: 1200px)">
-              <source srcset="./img/photo-road-tablet@1x.jpg" media="(min-width: 660px)">
-              <img class="image" src="img/photo-road-mobile@1x.jpg" alt="upload-img">
+              <source media="(min-width: 1200px)"
+                srcset="./img/photo-road-desktop@1x.jpg 1x, ./img/photo-road-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)"
+                srcset="./img/photo-road-tablet@1x.jpg 1x, ./img/photo-road-tablet@2x.jpg 2x">
+              <img class="image" src="./img/photo-road-mobile@1x.jpg" srcset="./img/photo-road-mobile@2x.jpg 2x"
+                alt="upload-img">
             </picture>
           </div>
           <div class="filter__inner">
             <ul class="filter__list">
               <li class="filter__item">
-                <button class="filter__btn js-filter__btn is-active">
-                  <svg class="icon icon_first icon_size_xl">
+                <button class="filter__btn js-filter__btn is-active" aria-label="Кадрирование">
+                  <svg class="icon icon_first icon_size_xl" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-editor-crop"></use>
                   </svg>
                 </button>
-                <div class="filter__range filter__range_tablet">
-                  <input class="range" type="range" name="range" min="0" max="100" value="50">
+                <div class="filter__range filter__range_main">
+                  <label class="visually-hidden" for="range-crop">Изменение размера</label>
+                  <input class="range" id="range-crop" type="range" name="range-crop" min="0" max="100" value="50" autocomplete="off">
                 </div>
               </li>
               <li class="filter__item">
-                <button class="filter__btn js-filter__btn">
-                  <svg class="icon icon_first icon_size_xl">
+                <button class="filter__btn js-filter__btn" aria-label="Заливка">
+                  <svg class="icon icon_first icon_size_xl" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-editor-fill"></use>
                   </svg>
                 </button>
-                <div class="filter__range filter__range_tablet">
-                  <input class="range" type="range" name="range" min="0" max="100" value="50">
+                <div class="filter__range filter__range_main">
+                  <label class="visually-hidden" for="range-fill">Изменение заливки</label>
+                  <input class="range" id="range-fill" type="range" name="range-fill" min="0" max="100" value="50" autocomplete="off">
                 </div>
               </li>
               <li class="filter__item">
-                <button class="filter__btn js-filter__btn">
-                  <svg class="icon icon_first icon_size_xl">
+                <button class="filter__btn js-filter__btn" aria-label="Контраст">
+                  <svg class="icon icon_first icon_size_xl" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-editor-contrast"></use>
                   </svg>
                 </button>
-                <div class="filter__range filter__range_tablet">
-                  <input class="range" type="range" name="range" min="0" max="100" value="50">
+                <div class="filter__range filter__range_main">
+                  <label class="visually-hidden" for="range-contrast">Изменение контраста</label>
+                  <input class="range" id="range-contrast" type="range" name="range-contrast" min="0" max="100" value="50" autocomplete="off">
                 </div>
               </li>
             </ul>
             <!-- На mobile при нажатии на .filter__btn, будет вставляться свой range -->
             <div class="filter__bottom">
               <div class="filter__range filter__range_mobile">
-                <input class="range" type="range" name="range" min="0" max="100" value="50">
+                <input class="range" type="range" name="range-crop" min="0" max="100" value="50" autocomplete="off">
               </div>
               <div class="filter__buttons">
                 <a class="button button_brand button_size_l" href="#">Запостить</a>
@@ -285,35 +320,36 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__wrapper">
-        <a class="logo logo_footer" href="index.html">
-          <svg class="icon icon_logo-tablet icon_logo-tablet_footer icon_first">
+        <a class="logo logo_footer" href="index.html" aria-label="Логотип Пинк">
+          <svg class="icon icon_logo-tablet icon_logo-tablet_footer icon_first" focusable="false">
             <use xlink:href="img/sprite.svg#logo-pink-blue-mobile"></use>
           </svg>
-          <svg class="icon icon_first icon_logo-desktop">
+          <svg class="icon icon_first icon_logo-desktop" focusable="false">
             <use xlink:href="img/sprite.svg#logo-pink-blue-desktop"></use>
           </svg>
         </a>
         <div class="social social_indent">
           <a class="social__item social__item_tw" href="#">Twitter
-            <svg class="icon icon_social icon_third">
+            <svg class="icon icon_social icon_third" focusable="false">
               <use xlink:href="img/sprite.svg#icon-twitter"></use>
             </svg>
           </a>
           <a class="social__item social__item_fb" href="#">Facebook
-            <svg class="icon icon_social icon_third">
+            <svg class="icon icon_social icon_third" focusable="false">
               <use xlink:href="img/sprite.svg#icon-facebook"></use>
             </svg>
           </a>
           <a class="social__item social__item_yt" href="#">YouTube
-            <svg class="icon icon_social icon_third">
+            <svg class="icon icon_social icon_third" focusable="false">
               <use xlink:href="img/sprite.svg#icon-youtube"></use>
             </svg>
           </a>
         </div>
         <div class="footer__copyright">
           <span>Разработано</span>
-          <a class="logo logo_academy" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg class="icon icon_logo-academy icon_third">
+          <a class="logo logo_academy" href="https://htmlacademy.ru/intensive/adaptive"
+            aria-label="Логотип htmlacademy">
+            <svg class="icon icon_logo-academy icon_third" focusable="false">
               <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
             </svg>
           </a>
