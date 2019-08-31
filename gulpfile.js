@@ -10,15 +10,31 @@ var gulp = require('gulp'),
   posthtml = require('gulp-posthtml'),
   svgSprite = require('gulp-svg-sprite'),
   del = require('del'),
-  browserSync = require("browser-sync"),
-  server = browserSync.create(),
-  serverReload = browserSync.reload;
+  browserSync = require('browser-sync'),
+  csso = require('gulp-csso'),
+  rename = require('gulp-rename'),
+  imagemin = require('gulp-imagemin'),
+  concat = require('gulp-concat'),
+  uglify = require('gulp-uglify'),
+  server = browserSync.create();
 
-gulp.task('delSprite', function () {
-  return del(['source/img/sprite.svg']);
+gulp.task('images', () => {
+  return gulp.src('./source/img/**/*.{jpg,png,svg}')
+    .pipe(imagemin([
+      imagemin.jpegtran({
+        progressive: true
+      }),
+      imagemin.optipng({
+        optimizationLevel: 3
+      }),
+      imagemin.svgo({
+        removeViewBox: false,
+      })
+    ]))
+    .pipe(gulp.dest('build/img'))
 });
 
-gulp.task('svgSprite', function () {
+gulp.task('svgSprite', () => {
   return gulp.src('source/img/*.svg') // svg files for sprite
     .pipe(svgSprite({
       mode: {
@@ -30,11 +46,17 @@ gulp.task('svgSprite', function () {
         }
       },
     }))
-    .pipe(gulp.dest('./source/img/'));
-    // .pipe(serverReload({stream: true}));
+    .pipe(gulp.dest('./build/img/'));
+  // .pipe(serverReload({stream: true}));
 });
 
-gulp.task('css', function () {
+gulp.task('html', () => {
+  return gulp.src('source/*.html')
+    .pipe(posthtml())
+    .pipe(gulp.dest('build'));
+});
+
+gulp.task('css', () => {
   return gulp.src('source/less/style.less')
     .pipe(plumber())
     .pipe(sourcemap.init())
@@ -42,23 +64,55 @@ gulp.task('css', function () {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(posthtml()) // timing
+    .pipe(csso())
+    .pipe(rename('style.min.css'))
     .pipe(sourcemap.write('.'))
-    .pipe(gulp.dest('source/css'))
+    .pipe(gulp.dest('build/css'))
     .pipe(server.stream());
 });
 
-gulp.task('server', function () {
+gulp.task('scripts', () => {
+  return gulp.src('source/js/*.js')
+    .pipe(concat('scripts.js'))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(uglify())
+    .pipe(gulp.dest('build/js'));
+});
+
+gulp.task('copy', () => {
+  return gulp.src([
+      'source/fonts/**/*{woff,woff2}',
+      'source/img/**',
+      'source/*.ico'
+    ], {
+      base: 'source'
+    })
+    .pipe(gulp.dest('build'));
+});
+
+gulp.task('clean', () => {
+  return del('build');
+});
+
+gulp.task('refresh', (done) => {
+  server.reload();
+  done();
+});
+
+gulp.task('server', () => {
   server.init({
-    server: 'source/',
+    server: 'build/',
     notify: false,
     open: true,
     cors: true,
-    ui: false
+    ui: false,
   });
 
   gulp.watch('source/less/**/*.less', gulp.series('css'));
-  gulp.watch('source/*.html').on('change', server.reload);
+  gulp.watch('source/img/*.svg', gulp.series('svgSprite', 'html', 'refresh'));
+  gulp.watch('source/*.html', gulp.series('html', 'refresh'));
 });
 
-gulp.task('start', gulp.series('delSprite', 'svgSprite', 'css', 'server'));
+gulp.task('build', gulp.series('clean', 'copy', 'css', 'scripts','svgSprite', 'html'));
+
+gulp.task('start', gulp.series('build', 'server'));
