@@ -17,7 +17,11 @@ headerBtn.addEventListener('click', function toggleMenu() {
 
   for (let i = 0; i < listIconsToggle.length; i++) {
     const el = listIconsToggle[i];
-    el.classList.contains(modOpened) ? el.classList.remove(modOpened) : el.classList.add(modOpened);
+    if (el.classList.contains(modOpened)) {
+      el.classList.remove(modOpened)
+    } else {
+      el.classList.add(modOpened);
+    }
   }
 });
 

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" type="text/html" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="body">
@@ -74,12 +74,12 @@
           <div class="form__group form__group_text">
             <label class="form__label" for="surname">Фамилия:</label>
             <input class="form__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию *"
-              autocomplete="off" required>
+              autocomplete="off" required="">
           </div>
           <div class="form__group form__group_text">
             <label class="form__label" for="first-name">Имя:</label>
             <input class="form__input" type="text" name="first-name" id="first-name" placeholder="Введите ваше имя *"
-              autocomplete="off" required>
+              autocomplete="off" required="">
           </div>
           <div class="form__group form__group_text">
             <label class="form__label" for="patronymic">Отчество:</label>
@@ -97,31 +97,55 @@
             <div class="form__row">
               <div class="form__group form__group_check">
                 <input class="form__check visually-hidden" type="checkbox" name="selfie-shark" id="selfie-shark">
-                <label class="form__label form__label_check" for="selfie-shark">Сделал селфи с акулой</label>
+                <label class="form__label form__label_check" for="selfie-shark">Сделал селфи с акулой
+                  <svg class="icon icon_third icon_size_m" focusable="false">
+                    <use xlink:href="img/sprite.svg#icon-yes-check"></use>
+                  </svg>
+                </label>
               </div>
               <div class="form__group form__group_check">
                 <input class="form__check visually-hidden" type="checkbox" name="tanned-beach" id="tanned-beach">
-                <label class="form__label form__label_check" for="tanned-beach">Обгорел на пляже</label>
+                <label class="form__label form__label_check" for="tanned-beach">Обгорел на пляже
+                  <svg class="icon icon_third icon_size_m" focusable="false">
+                    <use xlink:href="img/sprite.svg#icon-yes-check"></use>
+                  </svg>
+                </label>
               </div>
             </div>
             <div class="form__row">
               <div class="form__group form__group_check">
                 <input class="form__check visually-hidden" type="checkbox" name="chuck-norris" id="chuck-norris">
-                <label class="form__label form__label_check" for="chuck-norris">Видел Чака Норриса</label>
+                <label class="form__label form__label_check" for="chuck-norris">Видел Чака Норриса
+                  <svg class="icon icon_third icon_size_m" focusable="false">
+                    <use xlink:href="img/sprite.svg#icon-yes-check"></use>
+                  </svg>
+                </label>
               </div>
               <div class="form__group form__group_check">
                 <input class="form__check visually-hidden" type="checkbox" name="buy-souvenirs" id="buy-souvenirs">
-                <label class="form__label form__label_check" for="buy-souvenirs">Накупил сувениров</label>
+                <label class="form__label form__label_check" for="buy-souvenirs">Накупил сувениров
+                  <svg class="icon icon_third icon_size_m" focusable="false">
+                    <use xlink:href="img/sprite.svg#icon-yes-check"></use>
+                  </svg>
+                </label>
               </div>
             </div>
             <div class="form__row">
               <div class="form__group form__group_check">
                 <input class="form__check visually-hidden" type="checkbox" name="held-tower" id="held-tower">
-                <label class="form__label form__label_check" for="held-tower">Удержал башню</label>
+                <label class="form__label form__label_check" for="held-tower">Удержал башню
+                  <svg class="icon icon_third icon_size_m" focusable="false">
+                    <use xlink:href="img/sprite.svg#icon-yes-check"></use>
+                  </svg>
+                </label>
               </div>
               <div class="form__group form__group_check">
                 <input class="form__check visually-hidden" type="checkbox" name="broken-hotel" id="broken-hotel">
-                <label class="form__label form__label_check" for="broken-hotel">Разгромил отель</label>
+                <label class="form__label form__label_check" for="broken-hotel">Разгромил отель
+                  <svg class="icon icon_third icon_size_m" focusable="false">
+                    <use xlink:href="img/sprite.svg#icon-yes-check"></use>
+                  </svg>
+                </label>
               </div>
             </div>
           </div>
@@ -138,13 +162,23 @@
               <div class="form__inside form__inside_tel">
                 <input class="form__input" type="tel" name="phone" id="phone" placeholder="Номер, пожалуйста"
                   minlength="11" maxlength="11" pattern="\d{11}" autocomplete="on">
+                <span class="form__icon">
+                  <svg class="icon icon_third icon_size_ml" focusable="false">
+                    <use xlink:href="img/sprite.svg#icon-phone"></use>
+                  </svg>
+                </span>
               </div>
             </div>
             <div class="form__group form__group_contacts">
               <label class="form__label form__label_contacts" for="mail">Адрес почты</label>
               <div class="form__inside form__inside_mail">
                 <input class="form__input" type="email" name="mail" id="mail" placeholder="Введите почту *"
-                  autocomplete="on" required>
+                  autocomplete="on" required="">
+                <span class="form__icon">
+                  <svg class="icon icon_third icon_size_ml" focusable="false">
+                    <use xlink:href="img/sprite.svg#icon-mail"></use>
+                  </svg>
+                </span>
               </div>
             </div>
           </div>
@@ -157,7 +191,7 @@
               <h3 class="form__title">С каким приложением путешествовали?</h3>
             </div>
             <div class="form__group form__group_radio">
-              <input class="form__check visually-hidden" type="radio" name="radio-platform" id="ios" checked>
+              <input class="form__check visually-hidden" type="radio" name="radio-platform" id="ios" checked="">
               <label class="form__label form__label_check form__label_radio" for="ios">Pink для iOS</label>
             </div>
             <div class="form__group form__group_radio">
@@ -178,7 +212,7 @@
               <h3 class="form__title form__title_indent_s">Опишите свои эмоции</h3>
             </div>
             <textarea class="form__input form__input_textarea" name="comment"
-            placeholder="Можно прям в красках, не стесняясь в выражениях" autocomplete="off" id="textarea"></textarea>
+              placeholder="Можно прям в красках, не стесняясь в выражениях" autocomplete="off" id="textarea"></textarea>
             <label class="visually-hidden" for="textarea">Текстовое поле коментария</label>
           </div>
         </div>
@@ -208,24 +242,25 @@
         </a>
         <div class="social social_indent">
           <a class="social__item social__item_tw" href="#">Twitter
-            <svg class="icon icon_social icon_third" focusable="false">
+            <svg class="icon icon_size_ml icon_third" focusable="false">
               <use xlink:href="img/sprite.svg#icon-twitter"></use>
             </svg>
           </a>
           <a class="social__item social__item_fb" href="#">Facebook
-            <svg class="icon icon_social icon_third" focusable="false">
+            <svg class="icon icon_size_ml icon_third" focusable="false">
               <use xlink:href="img/sprite.svg#icon-facebook"></use>
             </svg>
           </a>
           <a class="social__item social__item_yt" href="#">YouTube
-            <svg class="icon icon_social icon_third" focusable="false">
+            <svg class="icon icon_size_ml icon_third" focusable="false">
               <use xlink:href="img/sprite.svg#icon-youtube"></use>
             </svg>
           </a>
         </div>
         <div class="footer__copyright">
           <span>Разработано</span>
-          <a class="logo logo_academy" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип htmlacademy">
+          <a class="logo logo_academy" href="https://htmlacademy.ru/intensive/adaptive"
+            aria-label="Логотип htmlacademy">
             <svg class="icon icon_logo-academy icon_third" focusable="false">
               <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
             </svg>
@@ -244,7 +279,7 @@
       </div>
     </div>
     <div class="popup__bottom">
-      <button class="button button_second button_size_xl button_w100">Закрыть окно</button>
+      <button class="button button_second button_size_xl button_w100 button_wrap_center">Закрыть окно</button>
     </div>
   </section>
   <!-- Убрать класс .popup_hide -->
@@ -258,11 +293,13 @@
       </div>
     </div>
     <div class="popup__bottom">
-      <button class="button button_second button_size_xl">OK</button>
+      <button class="button button_second button_size_xl button_wrap_center">OK</button>
     </div>
   </section>
 
   <script src="scripts/scripts.js"></script>
+  <script src="scripts/svgxuse.min.js"></script>
+  <script src="scripts/picturefill.js"></script>
 </body>
 
 </html>

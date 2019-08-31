@@ -332,24 +332,17 @@
     box-sizing: border-box;
     width: 39px;
     height: 39px;
-    content: "";
+    content: '';
     transition: @transition;
     border: 2px solid @color-silver-second;
     border-radius: 3px;
   }
 
-  &_check::after {
+  &_check > .icon {
     position: absolute;
-    top: -9px;
-    left: -9px;
-    width: 57px;
-    height: 57px;
-    content: "";
-    transition: @transition;
+    top: 6px;
+    left: 6px;
     opacity: 0;
-    background-image: url("../../img/sprite.svg#icon-yes-check");
-    background-repeat: no-repeat;
-    background-position: center;
   }
 
   &_radio::before {
@@ -358,10 +351,14 @@
   }
 
   &_radio::after {
+    position: absolute;
     top: 12px;
     left: 12px;
     width: 15px;
     height: 15px;
+    content: '';
+    transition: @transition;
+    opacity: 0;
     border-radius: 50%;
     background-color: @color-fourth;
     background-image: none;
@@ -378,33 +375,24 @@
 
 .form__inside {
   position: relative;
+}
 
-  &::after {
-    position: absolute;
-    z-index: 2;
-    top: 2px;
-    right: 2px;
-    display: none;
-    width: 59px;
-    height: 59px;
-    content: "";
-    background-color: @color-silver-second;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+.form__icon {
+  position: absolute;
+  z-index: 2;
+  top: 2px;
+  right: 2px;
+  display: none;
+  width: 59px;
+  height: 59px;
+  content: '';
+  background-color: @color-silver-second;
 
-    @media (min-width: @tablet) {
-      display: block;
-    }
-  }
+  align-items: center;
+  justify-content: center;
 
-  &_tel::after {
-    background-image: url("../../img/sprite.svg#icon-phone");
-    background-size: 70px 70px;
-  }
-
-  &_mail::after {
-    background-image: url("../../img/sprite.svg#icon-mail");
-    background-size: 50px 50px;
+  @media (min-width: @tablet) {
+    display: flex;
   }
 }
 
@@ -451,6 +439,7 @@
   }
 }
 
+.form__check:checked + .form__label_check .icon,
 .form__check:checked + .form__label_check::after {
   opacity: 1;
 }
