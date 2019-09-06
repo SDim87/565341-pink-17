@@ -72,7 +72,7 @@ gulp.task('css', () => {
 });
 
 gulp.task('scripts', () => {
-  return gulp.src('source/js/*.js')
+  return gulp.src('source/js/**/*.js')
     .pipe(concat('scripts.js'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())

@@ -5,8 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Пинк</title>
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" type="text/html" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
+  <meta name="Description" content="Сайт - приложение Пинк">
 </head>
 
 <body class="body">
@@ -17,7 +20,7 @@
         <div class="header__top">
           <a class="logo logo_header" href="index.html" aria-label="Логотип Пинк">
             <svg class="icon icon_second icon_logo-mobile" focusable="false">
-              <use xlink:href="img/sprite.svg#logo-pink-white-mobile"></use>
+              <use xlink:href="/img/sprite.svg#logo-pink-white-mobile"></use>
             </svg>
             <svg class="icon icon_second icon_logo-tablet" focusable="false">
               <use xlink:href="img/sprite.svg#logo-pink-white-tablet"></use>
@@ -48,7 +51,8 @@
             <a class="nav__link" href="form.html">Конкурс</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+            <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener">HTML
+              Academy</a>
           </li>
         </ul>
       </nav>
@@ -61,34 +65,41 @@
         <div class="banner__top">
           <div class="banner__img">
             <picture>
-              <source media="(min-width: 1200px)" srcset="./img/iphone-hand-desktop@1x.png 1x, ./img/iphone-hand-desktop@2x.png 2x">
-              <source media="(min-width: 660px)" srcset="./img/iphone-hand-tablet@1x.png 1x, ./img/iphone-hand-tablet@2x.png 2x">
-              <img class="image" src="./img/iphone-hand-mobile@1x.png" srcset="./img/iphone-hand-mobile@2x.png 2x" alt="Приложение в iphone">
+              <source media="(min-width: 1200px)"
+                srcset="./img/iphone-hand-desktop@1x.png 1x, ./img/iphone-hand-desktop@2x.png 2x">
+              <source media="(min-width: 660px)"
+                srcset="./img/iphone-hand-tablet@1x.png 1x, ./img/iphone-hand-tablet@2x.png 2x">
+              <img class="image" srcset="./img/iphone-hand-mobile@1x.png, ./img/iphone-hand-mobile@2x.png 2x"
+                alt="Приложение в iphone">
             </picture>
           </div>
         </div>
         <article class="load">
           <div class="container">
             <h2 class="title title_two title_centered title_indent_l title_none_mob">Взгляните на&nbsp;жизнь иначе!</h2>
-            <a class="button button_first button_size_l" href="https://www.apple.com/itunes/" target="_blank">Скачать
+            <a class="button button_first button_size_l" href="https://www.apple.com/itunes/" target="_blank"
+              rel="noopener">Скачать
               приложение</a>
             <ul class="load__list">
               <li class="load__item">
-                <a class="load__link" href="https://www.apple.com/itunes/" target="_blank" aria-label="itunes">
+                <a class="load__link" href="https://www.apple.com/itunes/" target="_blank" aria-label="itunes"
+                  rel="noopener">
                   <svg class="icon" focusable="false">
                     <use xlink:href="img/sprite.svg#logo-apple"></use>
                   </svg>
                 </a>
               </li>
               <li class="load__item">
-                <a class="load__link" href="https://play.google.com/store/apps" target="_blank" aria-label="Google Store">
+                <a class="load__link" href="https://play.google.com/store/apps" target="_blank"
+                  aria-label="Google Store" rel="noopener">
                   <svg class="icon" focusable="false">
                     <use xlink:href="img/sprite.svg#logo-android"></use>
                   </svg>
                 </a>
               </li>
               <li class="load__item">
-                <a class="load__link" href="https://www.microsoft.com/en-us/store/apps/windows" target="_blank" aria-label="Microsoft Store">
+                <a class="load__link" href="https://www.microsoft.com/en-us/store/apps/windows" target="_blank"
+                  aria-label="Microsoft Store" rel="noopener">
                   <svg class="icon" focusable="false">
                     <use xlink:href="img/sprite.svg#logo-microsoft"></use>
                   </svg>
@@ -296,7 +307,9 @@
     </section>
     <section class="map">
       <h2 class="visually-hidden">Карта</h2>
-      <iframe title="Интерактивная карта" width="400" height="200" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6159425987807!2d30.323182336479817!3d59.938514796155346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1564660676444!5m2!1sru!2sru" allowfullscreen=""></iframe>
+      <iframe title="Интерактивная карта" width="400" height="200"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6159425987807!2d30.323182336479817!3d59.938514796155346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1564660676444!5m2!1sru!2sru"
+        allowfullscreen=""></iframe>
     </section>
   </main>
   <footer class="footer footer_none-mobile">
@@ -329,7 +342,8 @@
         </div>
         <div class="footer__copyright">
           <span>Разработано</span>
-          <a class="logo logo_academy" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип htmlacademy">
+          <a class="logo logo_academy" href="https://htmlacademy.ru/intensive/adaptive"
+            aria-label="Логотип htmlacademy">
             <svg class="icon icon_logo-academy icon_third" focusable="false">
               <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
             </svg>

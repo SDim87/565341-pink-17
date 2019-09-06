@@ -97,12 +97,17 @@
   align-items: center;
 
   @media (min-width: @tablet) {
-    pointer-events: none;
+    // pointer-events: none;
+  }
+
+  &:hover .icon {
+    fill: @color-main;
+    opacity: 0.5;
   }
 }
 
 .filter__btn.is-active {
-  pointer-events: none;
+  // pointer-events: none;
 }
 
 .filter__btn .icon {
@@ -121,11 +126,19 @@
   fill: @color-fourth;
 }
 
-.filter__btn:hover .icon {
+.filter__btn:hover .icon,
+.filter__btn:focus .icon {
   opacity: 0.5;
 
   @media (min-width: @tablet) {
-    pointer-events: none;
+    fill: @color-main;
+    opacity: 0.5;
+  }
+}
+
+.filter__btn:active .icon {
+  @media (min-width: @tablet) {
+    opacity: 0.3;
   }
 }
 
